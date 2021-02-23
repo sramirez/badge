@@ -33,7 +33,7 @@ parser.add_argument('--path', help='data path', type=str, default='data')
 parser.add_argument('--data', help='dataset (non-openML)', type=str, default='')
 parser.add_argument('--nQuery', help='number of points to query in a batch', type=int, default=100)
 parser.add_argument('--nStart', help='number of points to start', type=int, default=100)
-parser.add_argument('--nEnd', help = 'total number of points to query', type=int, default=50000)
+parser.add_argument('--nEnd', help='total number of points to query', type=int, default=50000)
 parser.add_argument('--nEmb', help='number of embedding dims (mlp)', type=int, default=256)
 opts = parser.parse_args()
 
