@@ -35,7 +35,7 @@ class Strategy:
             optimizer.zero_grad()
             out, e1 = self.clf(x)
             loss = F.cross_entropy(out, y)
-            accFinal += torch.sum((torch.max(out,1)[1] == y).float()).data.item()
+            accFinal += torch.sum((torch.max(out, 1)[1] == y).float()).data.item()
             loss.backward()
 
             # clamp gradients, just in case
@@ -44,8 +44,6 @@ class Strategy:
             optimizer.step()
         return accFinal / len(loader_tr.dataset.X)
 
-
-    
     def train(self):
         def weight_reset(m):
             if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear):
@@ -56,7 +54,9 @@ class Strategy:
         optimizer = optim.Adam(self.clf.parameters(), lr = self.args['lr'], weight_decay=0)
 
         idxs_train = np.arange(self.n_pool)[self.idxs_lb]
-        loader_tr = DataLoader(self.handler(self.X[idxs_train], torch.Tensor(self.Y.numpy()[idxs_train]).long(), transform=self.args['transform']), shuffle=True, **self.args['loader_tr_args'])
+        loader_tr = DataLoader(self.handler(self.X[idxs_train], torch.Tensor(self.Y.numpy()[idxs_train]).long(),
+                                            transform=self.args['transform']),
+                               shuffle=True, **self.args['loader_tr_args'])
    
         epoch = 1
         accCurrent = 0.

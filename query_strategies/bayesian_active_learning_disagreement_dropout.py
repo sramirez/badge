@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from .strategy import Strategy
 
+
 class BALDDropout(Strategy):
 	def __init__(self, X, Y, idxs_lb, net, handler, args, n_drop=10):
 		super(BALDDropout, self).__init__(X, Y, idxs_lb, net, handler, args)

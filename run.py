@@ -1,11 +1,9 @@
 import numpy as np
 import sys
-import gzip
 import openml
 import os
 import argparse
 from dataset import get_dataset, get_handler
-from model import get_net
 import vgg
 import resnet
 from sklearn.preprocessing import LabelEncoder
@@ -13,13 +11,11 @@ import torch.nn.functional as F
 from torch import nn
 from torchvision import transforms
 import torch
-import pdb
-from scipy.stats import zscore
+import pytorch_mask_rcnn as pmr
 
 from query_strategies import RandomSampling, BadgeSampling, \
                                 BaselineSampling, LeastConfidence, MarginSampling, \
-                                EntropySampling, CoreSet, ActiveLearningByLearning, \
-                                LeastConfidenceDropout, MarginSamplingDropout, EntropySamplingDropout, \
+                                EntropySampling, LeastConfidenceDropout, MarginSamplingDropout, EntropySamplingDropout, \
                                 KMeansSampling, KCenterGreedy, BALDDropout, CoreSet, \
                                 AdversarialBIM, AdversarialDeepFool, ActiveLearningByLearning
 
@@ -64,25 +60,33 @@ args_pool = {'MNIST':
                  'loader_tr_args':{'batch_size': 128, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
                  'optimizer_args':{'lr': 0.05, 'momentum': 0.3},
-                 'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])}
+                 'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])},
+             'VOC':
+                 {'n_epoch': 20, 'transform': transforms.Compose([transforms.ToTensor(),
+                                                                  transforms.Normalize(
+                                                                      (0.485, 0.456, 0.406), (0.229, 0.224, 0.225))]),
+                 'loader_tr_args':{'batch_size': 64, 'num_workers': 1},
+                 'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
+                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5}}
                 }
-args_pool['CIFAR10'] = {'n_epoch': 3, 
+
+args_pool['CIFAR10'] = {'n_epoch': 3,
     'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470,     0.2435, 0.2616))]),
     'loader_tr_args':{'batch_size': 128, 'num_workers': 3},
     'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
     'optimizer_args':{'lr': 0.05, 'momentum': 0.3},
-    'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])    
+    'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])
 }
 
 opts.nClasses = 10
-args_pool['CIFAR10']['transform'] =  args_pool['CIFAR10']['transformTest'] # remove data augmentation
+args_pool['CIFAR10']['transform'] = args_pool['CIFAR10']['transformTest'] # remove data augmentation
 args_pool['MNIST']['transformTest'] = args_pool['MNIST']['transform']
 args_pool['SVHN']['transformTest'] = args_pool['SVHN']['transform']
+args_pool['VOC']['transformTest'] = args_pool['VOC']['transform']
 
 if opts.did == 0: args = args_pool[DATA_NAME]
 if not os.path.exists(opts.path):
     os.makedirs(opts.path)
-
 
 # load openml dataset if did is supplied
 if opts.did > 0:
@@ -118,7 +122,6 @@ if opts.did > 0:
 
         if len(np.unique(Y_tr)) == opts.nClasses: break
 
-
     args = {'transform':transforms.Compose([transforms.ToTensor()]),
             'n_epoch':10,
             'loader_tr_args':{'batch_size': 128, 'num_workers': 1},
@@ -130,6 +133,12 @@ if opts.did > 0:
 # load non-openml dataset
 else:
     X_tr, Y_tr, X_te, Y_te = get_dataset(DATA_NAME, opts.path)
+    if DATA_NAME == 'VOC':
+        dataset_train = pmr.datasets(args.dataset, args.data_dir, "train2017", train=True)
+        indices = torch.randperm(len(dataset_train)).tolist()
+        d_train = torch.utils.data.Subset(dataset_train, indices)
+        d_test = pmr.datasets(args.dataset, args.data_dir, "val2017", train=True)  # set train=True for eval
+
     opts.dim = np.shape(X_tr)[1:]
     handler = get_handler(opts.data)
 
@@ -148,17 +157,6 @@ idxs_tmp = np.arange(n_pool)
 np.random.shuffle(idxs_tmp)
 idxs_lb[idxs_tmp[:NUM_INIT_LB]] = True
 
-# linear model class
-class linMod(nn.Module):
-    def __init__(self, nc=1, sz=28):
-        super(linMod, self).__init__()
-        self.lm = nn.Linear(int(np.prod(dim)), opts.nClasses)
-    def forward(self, x):
-        x = x.view(-1, int(np.prod(dim)))
-        out = self.lm(x)
-        return out, x
-    def get_embedding_dim(self):
-        return int(np.prod(dim))
 
 # mlp model class
 class mlpMod(nn.Module):
@@ -191,7 +189,7 @@ if opts.did > 0 and opts.model != 'mlp':
     print('openML datasets only work with mlp', flush=True)
     raise ValueError
 
-if type(X_tr[0]) is not np.ndarray:
+if type(X_tr[0]) is not np.ndarray and not list:
     X_tr = X_tr.numpy()
 
 # set up the specified sampler
@@ -207,6 +205,8 @@ elif opts.alg == 'coreset': # coreset sampling
     strategy = CoreSet(X_tr, Y_tr, idxs_lb, net, handler, args)
 elif opts.alg == 'entropy': # entropy-based sampling
     strategy = EntropySampling(X_tr, Y_tr, idxs_lb, net, handler, args)
+elif opts.alg == 'deepfool':
+    strategy = AdversarialDeepFool(X_tr, Y_tr, idxs_lb, net, handler, args)
 elif opts.alg == 'baseline': # badge but with k-DPP sampling instead of k-means++
     strategy = BaselineSampling(X_tr, Y_tr, idxs_lb, net, handler, args)
 elif opts.alg == 'albl': # active learning by learning
