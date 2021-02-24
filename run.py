@@ -3,7 +3,7 @@ import sys
 import openml
 import os
 import argparse
-from dataset import get_dataset, get_handler
+from dataset import get_dataset, get_handler, get_VOC_detection
 import vgg
 import resnet
 from sklearn.preprocessing import LabelEncoder
@@ -44,47 +44,56 @@ args_pool = {'MNIST':
                 {'n_epoch': 10, 'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]),
                  'loader_tr_args':{'batch_size': 64, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
-                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5}},
+                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5},
+                 'nClasses': 10},
             'FashionMNIST':
                 {'n_epoch': 10, 'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]),
                  'loader_tr_args':{'batch_size': 64, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
-                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5}},
+                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5},
+                 'nClasses': 10}, # TODO: change it
             'SVHN':
                 {'n_epoch': 20, 'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4377, 0.4438, 0.4728), (0.1980, 0.2010, 0.1970))]),
                  'loader_tr_args':{'batch_size': 64, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
-                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5}},
+                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5},
+                 'nClasses': 10},
             'CIFAR10':
                 {'n_epoch': 3, 'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))]),
                  'loader_tr_args':{'batch_size': 128, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
                  'optimizer_args':{'lr': 0.05, 'momentum': 0.3},
-                 'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])},
+                 'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))]),
+                 'nClasses': 2},
              'VOC':
                  {'n_epoch': 20, 'transform': transforms.Compose([transforms.ToTensor(),
                                                                   transforms.Normalize(
                                                                       (0.485, 0.456, 0.406), (0.229, 0.224, 0.225))]),
                  'loader_tr_args':{'batch_size': 64, 'num_workers': 1},
                  'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
-                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5}}
+                 'optimizer_args':{'lr': 0.01, 'momentum': 0.5},
+                  'nClasses': 2},
+             'COCO':
+                 {'n_epoch': 20, 'transform': transforms.Compose([transforms.ToTensor(),
+                                                                  transforms.Normalize(
+                                                                      (0.485, 0.456, 0.406), (0.229, 0.224, 0.225))]),
+                  'loader_tr_args': {'batch_size': 64, 'num_workers': 1},
+                  'loader_te_args': {'batch_size': 1000, 'num_workers': 1},
+                  'optimizer_args': {'lr': 0.01, 'momentum': 0.5},
+                  'nClasses': 2}
                 }
-
-args_pool['CIFAR10'] = {'n_epoch': 3,
-    'transform': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470,     0.2435, 0.2616))]),
-    'loader_tr_args':{'batch_size': 128, 'num_workers': 3},
-    'loader_te_args':{'batch_size': 1000, 'num_workers': 1},
-    'optimizer_args':{'lr': 0.05, 'momentum': 0.3},
-    'transformTest': transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])
-}
 
 opts.nClasses = 10
 args_pool['CIFAR10']['transform'] = args_pool['CIFAR10']['transformTest'] # remove data augmentation
 args_pool['MNIST']['transformTest'] = args_pool['MNIST']['transform']
 args_pool['SVHN']['transformTest'] = args_pool['SVHN']['transform']
 args_pool['VOC']['transformTest'] = args_pool['VOC']['transform']
+args_pool['COCO']['transformTest'] = args_pool['COCO']['transform']
 
-if opts.did == 0: args = args_pool[DATA_NAME]
+if opts.did == 0:
+    args = args_pool[DATA_NAME]
+    opts.nClasses = args['nClasses']
+
 if not os.path.exists(opts.path):
     os.makedirs(opts.path)
 
@@ -132,12 +141,10 @@ if opts.did > 0:
 
 # load non-openml dataset
 else:
-    X_tr, Y_tr, X_te, Y_te = get_dataset(DATA_NAME, opts.path)
     if DATA_NAME == 'VOC':
-        dataset_train = pmr.datasets(args.dataset, args.data_dir, "train2017", train=True)
-        indices = torch.randperm(len(dataset_train)).tolist()
-        d_train = torch.utils.data.Subset(dataset_train, indices)
-        d_test = pmr.datasets(args.dataset, args.data_dir, "val2017", train=True)  # set train=True for eval
+        X_tr, Y_tr_detection, Y_tr, X_te, Y_te_detection, Y_te = get_VOC_detection(opts.path)
+    else:
+        X_tr, Y_tr, X_te, Y_te = get_dataset(DATA_NAME, opts.path)
 
     opts.dim = np.shape(X_tr)[1:]
     handler = get_handler(opts.data)
@@ -218,7 +225,8 @@ else:
     raise ValueError
 
 # print info
-if opts.did > 0: DATA_NAME='OML' + str(opts.did)
+if opts.did > 0:
+    DATA_NAME ='OML' + str(opts.did)
 print(DATA_NAME, flush=True)
 print(type(strategy).__name__, flush=True)
 

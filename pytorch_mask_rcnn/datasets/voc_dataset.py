@@ -92,7 +92,7 @@ class VOCDataset(GeneralizedDataset):
 
     def get_image(self, img_id):
         image = Image.open(os.path.join(self.data_dir, "JPEGImages/{}.jpg".format(img_id)))
-        return image.convert("RGB")
+        return image.convert("RGB").resize((128, 128), Image.ANTIALIAS)
         
     def get_target(self, img_id):
         masks = Image.open(os.path.join(self.data_dir, 'SegmentationObject/{}.png'.format(img_id)))

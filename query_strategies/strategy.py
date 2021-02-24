@@ -50,7 +50,7 @@ class Strategy:
                 m.reset_parameters()
 
         n_epoch = self.args['n_epoch']
-        self.clf =  self.net.apply(weight_reset).cuda()
+        self.clf = self.net.apply(weight_reset).cuda()
         optimizer = optim.Adam(self.clf.parameters(), lr = self.args['lr'], weight_decay=0)
 
         idxs_train = np.arange(self.n_pool)[self.idxs_lb]

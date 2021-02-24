@@ -1,5 +1,4 @@
 import numpy as np
-import pdb
 import torch
 from torchvision import datasets
 from torch.utils.data import Dataset
@@ -19,6 +18,18 @@ def get_dataset(name, path):
         return get_CIFAR10(path)
     elif name == 'VOC':
         return get_VOC_detection(path)
+    elif name == 'COCO':
+        return get_COCO_detection(path)
+
+def get_COCO_detection(path):
+    raw_tr = datasets.CocoDetection(path + '/COCO', image_set='train', download=True)
+    raw_te = datasets.CocoDetection(path + '/COCO', image_set='val', download=True)
+    X_tr = raw_tr.images
+    Y_tr = raw_tr.annotations
+    X_te = raw_te.images
+    Y_te = raw_te.annotations
+    return X_tr, Y_tr, X_te, Y_te
+
 
 def get_VOC_classification(path):
     raw_tr = datasets.VOCDetection(path + '/VOC', image_set='train', download=True)
@@ -29,6 +40,7 @@ def get_VOC_classification(path):
     Y_te = raw_te.annotations
     return X_tr, Y_tr, X_te, Y_te
 
+
 def _transform_voc(ds):
     X_tr = []
     Y_tr = []
@@ -36,22 +48,22 @@ def _transform_voc(ds):
     for x in ds:
         X_tr.append(np.transpose(x[0].numpy(), (1, 2, 0)))
         found_class_indices = [i for i, x in enumerate(x[1]['labels']) if x == VOC_CLASSES.index('person')]
-
         Y_cls_tr.append(1 if len(found_class_indices) > 0 else 0)
         Y_tr.append({'image_id': x[1]['image_id'], 'boxes': x[1]['boxes'][found_class_indices],
             'labels': x[1]['labels'][found_class_indices], 'masks': x[1]['masks'][found_class_indices]})
-    return X_tr, Y_tr, Y_cls_tr
+
+    return np.array(X_tr), Y_tr, torch.tensor(Y_cls_tr)
 
 
 def get_VOC_detection(path):
     dataset_train = pmr.datasets("voc", "data/VOC/VOCdevkit/VOC2012", "train", train=True)
     indices = torch.randperm(len(dataset_train)).tolist()
     d_train = torch.utils.data.Subset(dataset_train, indices)
-    d_test = pmr.datasets("voc", "data/VOC/VOCdevkit/VOC2012", "val", train=True)  # set train=True for eval
+    d_test = pmr.datasets("voc", "data/VOC/VOCdevkit/VOC2012", "val", train=True)  # set train=True for eval and to get labels
 
-    X_tr, Y_tr, Y_cls_tr = _transform_voc(d_train)
-    X_te, Y_te, Y_cls_te = _transform_voc(d_test)
-    return X_tr, Y_tr, Y_cls_tr, X_te, Y_te, Y_cls_te
+    X_tr, Y_tr_detection, Y_tr_cls = _transform_voc(d_train)
+    X_te, Y_te_detection, Y_te_cls = _transform_voc(d_test)
+    return X_tr, Y_tr_detection, Y_tr_cls, X_te, Y_te_detection, Y_te_cls
 
 def get_MNIST(path):
     raw_tr = datasets.MNIST(path + '/MNIST', train=True, download=True)
@@ -184,7 +196,7 @@ class DataHandlerVOC(Dataset):
     def __getitem__(self, index):
         x, y = self.X[index], self.Y[index]
         if self.transform is not None:
-            x = Image.fromarray(x)
+            x = Image.fromarray((x * 255).astype(np.uint8))
             x = self.transform(x)
         return x, y, index
 
