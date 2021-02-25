@@ -39,7 +39,7 @@ parser.add_argument('--lr-steps', nargs="+", type=int, default=[22, 26])
 parser.add_argument("--lr_object", type=float)
 parser.add_argument("--momentum", type=float, default=0.9)
 parser.add_argument("--weight-decay", type=float, default=0.0001)
-parser.add_argument("--epochs", type=int, default=1)
+parser.add_argument("--epochs", type=int, default=10)
 parser.add_argument("--iters", type=int, default=200, help="max iters per epoch, -1 denotes auto")
 parser.add_argument("--print-freq", type=int, default=100, help="frequency of printing losses")
 opts = parser.parse_args()
@@ -227,10 +227,10 @@ print(DATA_NAME, flush=True)
 print(type(strategy).__name__, flush=True)
 
 # round 0 accuracy
-# TODO: only train with initial labeled pool (idxs_train)
-idxs_train = strategy.train()
+strategy.train()
 if DATA_NAME == 'VOC':
-    ap = train_object_detector(d_train, d_test, opts)
+    subset = torch.utils.data.Subset(d_train, np.arange(len(d_train))[strategy.idxs_lb])
+    ap = train_object_detector(subset, d_test, opts)
     print(str(opts.nStart) + '\ttesting mAP {}'.format(ap), flush=True)
 P = strategy.predict(X_te, Y_te)
 acc = np.zeros(NUM_ROUND+1)
@@ -242,8 +242,7 @@ for rd in range(1, NUM_ROUND+1):
     print('Round {}'.format(rd), flush=True)
 
     # query
-    output = strategy.query(NUM_QUERY)
-    q_idxs = output
+    q_idxs = strategy.query(NUM_QUERY)
     idxs_lb[q_idxs] = True
 
     # report weighted accuracy
@@ -253,7 +252,7 @@ for rd in range(1, NUM_ROUND+1):
     strategy.update(idxs_lb)
     strategy.train()
     if DATA_NAME == 'VOC':
-        subset = torch.utils.data.Subset(d_train, q_idxs)
+        subset = torch.utils.data.Subset(d_train, np.arange(len(d_train))[strategy.idxs_lb])
         ap = train_object_detector(subset, d_test, opts)
         print(str(opts.nStart) + '\ttesting mAP {}'.format(ap), flush=True)
 

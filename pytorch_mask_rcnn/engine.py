@@ -21,10 +21,11 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, args):
     b_m = Meter("backward")
     model.train()
     A = time.time()
-    for i, (image, target) in enumerate(data_loader):
+    n_iter = 0
+    for _, (image, target) in enumerate(data_loader):
         if target['boxes'].shape[0] > 0:
             T = time.time()
-            num_iters = epoch * len(data_loader) + i
+            num_iters = epoch * len(data_loader) + n_iter
             if num_iters <= args.warmup_iters:
                 r = num_iters / args.warmup_iters
                 for j, p in enumerate(optimizer.param_groups):
@@ -48,8 +49,9 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, args):
                 print("{}\t".format(num_iters), "\t".join("{:.3f}".format(l.item()) for l in losses.values()))
 
             t_m.update(time.time() - T)
-            if i >= iters - 1:
-                break
+            n_iter += 1
+        if n_iter - 1 >= iters - 1:
+            break
            
     A = time.time() - A
     print("iter: {:.1f}, total: {:.1f}, model: {:.1f}, backward: {:.1f}".format(1000*A/iters,1000*t_m.avg,1000*m_m.avg,1000*b_m.avg))

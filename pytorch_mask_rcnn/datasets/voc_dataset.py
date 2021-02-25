@@ -120,11 +120,15 @@ class VOCDataset(GeneralizedDataset):
         target = dict(image_id=img_id, boxes=boxes, labels=labels, masks=masks)
 
         # only get person boxes
-        found_class_indices = [i for i, x in enumerate(target['labels']) if x == VOC_CLASSES.index('person')]
-        new_target = dict(image_id=img_id, boxes=boxes[found_class_indices], labels=labels[found_class_indices],
-                          masks=masks)  # TODO: change it! target -> new_target
+        found_class_indices = [i for i, x in enumerate(labels) if x == VOC_CLASSES.index('person')]
+        if not found_class_indices:
+            masks = torch.full(masks.shape, 0)  # a single empty mask
+        else:
+            masks = masks[found_class_indices]
+        new_target = dict(image_id=img_id, boxes=boxes[found_class_indices],
+                          labels=labels[found_class_indices], masks=masks)
 
-        return target
+        return new_target
     
     @property
     def coco(self):

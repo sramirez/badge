@@ -8,7 +8,7 @@ def train_object_detector(d_train, d_test, args) -> float:
     # init model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     args.warmup_iters = max(1000, len(d_train))
-    num_classes = len(d_train.dataset.classes) + 1  # including background class
+    num_classes = 21  # including background class
     model = pmr.maskrcnn_resnet50(pretrained=True, num_classes=num_classes).to(device)
     params = [p for p in model.parameters() if p.requires_grad]
     optimizer = torch.optim.SGD(
@@ -32,6 +32,7 @@ def train_object_detector(d_train, d_test, args) -> float:
         trained_epoch = epoch + 1
         print("training: {:.2f} s, evaluation: {:.2f} s".format(A, B))
         pmr.collect_gpu_info("maskrcnn", [1 / iter_train, 1 / iter_eval])
-        print(eval_output.get_AP())
+        if len(list(eval_output.buffer)) > 0:
+            print("mAP: {}".format(eval_output.get_AP()))
 
     return eval_output.get_AP()
