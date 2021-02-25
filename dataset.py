@@ -46,7 +46,8 @@ def _transform_voc(ds):
     Y_tr = []
     Y_cls_tr = []
     for x in ds:
-        X_tr.append(np.transpose(x[0].numpy(), (1, 2, 0)))
+        img = torch.nn.functional.interpolate(x[0].unsqueeze(0), size=(128, 128), mode='bilinear')
+        X_tr.append(np.transpose(img.squeeze(0).numpy(), (1, 2, 0)))
         found_class_indices = [i for i, x in enumerate(x[1]['labels']) if x == VOC_CLASSES.index('person')]
         Y_cls_tr.append(1 if len(found_class_indices) > 0 else 0)
         Y_tr.append({'image_id': x[1]['image_id'], 'boxes': x[1]['boxes'][found_class_indices],

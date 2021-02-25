@@ -67,6 +67,7 @@ class Strategy:
             if (epoch % 50 == 0) and (accCurrent < 0.2): # reset if not converging
                 self.clf = self.net.apply(weight_reset)
                 optimizer = optim.Adam(self.clf.parameters(), lr = self.args['lr'], weight_decay=0)
+        return idxs_train
 
     def predict(self, X, Y):
         if type(X) is np.ndarray:

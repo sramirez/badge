@@ -67,14 +67,15 @@ def evaluate(model, data_loader, device, args, generate=True):
     results = torch.load("results.pth", map_location="cpu")
 
     S = time.time()
-    coco_evaluator.accumulate(results)
+    if len(results) > 0:
+        coco_evaluator.accumulate(results)
     print("accumulate: {:.1f}s".format(time.time() - S))
 
     # collect outputs of buildin function print
     temp = sys.stdout
     sys.stdout = TextArea()
-
-    coco_evaluator.summarize()
+    if len(results) > 0:
+        coco_evaluator.summarize()
 
     output = sys.stdout
     sys.stdout = temp

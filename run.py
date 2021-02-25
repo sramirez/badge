@@ -227,7 +227,8 @@ print(DATA_NAME, flush=True)
 print(type(strategy).__name__, flush=True)
 
 # round 0 accuracy
-strategy.train()
+# TODO: only train with initial labeled pool (idxs_train)
+idxs_train = strategy.train()
 if DATA_NAME == 'VOC':
     ap = train_object_detector(d_train, d_test, opts)
     print(str(opts.nStart) + '\ttesting mAP {}'.format(ap), flush=True)

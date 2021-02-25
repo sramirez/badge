@@ -93,7 +93,7 @@ class VOCDataset(GeneralizedDataset):
 
     def get_image(self, img_id):
         image = Image.open(os.path.join(self.data_dir, "JPEGImages/{}.jpg".format(img_id)))
-        return image.convert("RGB").resize((128, 128), Image.ANTIALIAS)
+        return image.convert("RGB")
         
     def get_target(self, img_id):
         masks = Image.open(os.path.join(self.data_dir, 'SegmentationObject/{}.png'.format(img_id)))
@@ -122,9 +122,9 @@ class VOCDataset(GeneralizedDataset):
         # only get person boxes
         found_class_indices = [i for i, x in enumerate(target['labels']) if x == VOC_CLASSES.index('person')]
         new_target = dict(image_id=img_id, boxes=boxes[found_class_indices], labels=labels[found_class_indices],
-                          masks=masks)
+                          masks=masks)  # TODO: change it! target -> new_target
 
-        return new_target
+        return target
     
     @property
     def coco(self):
