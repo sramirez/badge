@@ -117,12 +117,11 @@ class VOCDataset(GeneralizedDataset):
         boxes = torch.tensor(boxes, dtype=torch.float32)
         labels = torch.tensor(labels)
         img_id = torch.tensor([self.ids.index(img_id)])
-        target = dict(image_id=img_id, boxes=boxes, labels=labels, masks=masks)
 
         # only get person boxes
         found_class_indices = [i for i, x in enumerate(labels) if x == VOC_CLASSES.index('person')]
         if not found_class_indices:
-            masks = torch.full(masks.shape, 0)  # a single empty mask
+            masks = torch.full(masks.shape, 0)
         else:
             masks = masks[found_class_indices]
         new_target = dict(image_id=img_id, boxes=boxes[found_class_indices],

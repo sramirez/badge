@@ -63,7 +63,7 @@ def evaluate(model, data_loader, device, args, generate=True):
         iter_eval = generate_results(model, data_loader, device, args)
 
     dataset = data_loader #
-    iou_types = ["bbox"]
+    iou_types = ["bbox", "segm"]
     coco_evaluator = CocoEvaluator(dataset.coco, iou_types)
 
     results = torch.load("results.pth", map_location="cpu")
