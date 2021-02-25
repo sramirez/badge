@@ -19,6 +19,7 @@ VOC_CLASSES = (
     "sheep", "sofa", "train", "tvmonitor"
 )
 
+
 def target_to_coco_ann(target):
     image_id = target['image_id'].item()
     boxes = target['boxes']
@@ -115,10 +116,15 @@ class VOCDataset(GeneralizedDataset):
 
         boxes = torch.tensor(boxes, dtype=torch.float32)
         labels = torch.tensor(labels)
-
         img_id = torch.tensor([self.ids.index(img_id)])
         target = dict(image_id=img_id, boxes=boxes, labels=labels, masks=masks)
-        return target
+
+        # only get person boxes
+        found_class_indices = [i for i, x in enumerate(target['labels']) if x == VOC_CLASSES.index('person')]
+        new_target = dict(image_id=img_id, boxes=boxes[found_class_indices], labels=labels[found_class_indices],
+                          masks=masks)
+
+        return new_target
     
     @property
     def coco(self):
@@ -130,8 +136,7 @@ class VOCDataset(GeneralizedDataset):
     
     def convert_to_coco_format(self, overwrite=False):
         if overwrite or not os.path.exists(self.ann_file):
-            
-            
+
             print("Generating COCO-style annotations...")
             voc_dataset = VOCDataset(self.data_dir, self.split, True)
             instances = defaultdict(list)

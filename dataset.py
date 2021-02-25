@@ -63,7 +63,7 @@ def get_VOC_detection(path):
 
     X_tr, Y_tr_detection, Y_tr_cls = _transform_voc(d_train)
     X_te, Y_te_detection, Y_te_cls = _transform_voc(d_test)
-    return X_tr, Y_tr_detection, Y_tr_cls, X_te, Y_te_detection, Y_te_cls
+    return X_tr, d_train, Y_tr_cls, X_te, d_test, Y_te_cls
 
 def get_MNIST(path):
     raw_tr = datasets.MNIST(path + '/MNIST', train=True, download=True)

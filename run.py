@@ -7,11 +7,11 @@ from dataset import get_dataset, get_handler, get_VOC_detection
 import vgg
 import resnet
 from sklearn.preprocessing import LabelEncoder
-import torch.nn.functional as F
-from torch import nn
+
 from torchvision import transforms
 import torch
 import pytorch_mask_rcnn as pmr
+from mlp_mod import mlpMod
 
 from query_strategies import RandomSampling, BadgeSampling, \
                                 BaselineSampling, LeastConfidence, MarginSampling, \
@@ -20,6 +20,8 @@ from query_strategies import RandomSampling, BadgeSampling, \
                                 AdversarialBIM, AdversarialDeepFool, ActiveLearningByLearning
 
 # code based on https://github.com/ej0cl6/deep-active-learning"
+from train_object_detector import train_object_detector
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--alg', help='acquisition algorithm', type=str, default='rand')
 parser.add_argument('--did', help='openML dataset index, if any', type=int, default=0)
@@ -31,7 +33,19 @@ parser.add_argument('--nQuery', help='number of points to query in a batch', typ
 parser.add_argument('--nStart', help='number of points to start', type=int, default=100)
 parser.add_argument('--nEnd', help='total number of points to query', type=int, default=50000)
 parser.add_argument('--nEmb', help='number of embedding dims (mlp)', type=int, default=256)
+# object detection parameters
+parser.add_argument("--seed", type=int, default=3)
+parser.add_argument('--lr-steps', nargs="+", type=int, default=[22, 26])
+parser.add_argument("--lr_object", type=float)
+parser.add_argument("--momentum", type=float, default=0.9)
+parser.add_argument("--weight-decay", type=float, default=0.0001)
+parser.add_argument("--epochs", type=int, default=1)
+parser.add_argument("--iters", type=int, default=200, help="max iters per epoch, -1 denotes auto")
+parser.add_argument("--print-freq", type=int, default=100, help="frequency of printing losses")
 opts = parser.parse_args()
+
+if opts.lr_object is None:
+    opts.lr_object = 0.02 * 1 / 16  # lr should be 'batch_size / 16 * 0.02'
 
 # parameters
 NUM_INIT_LB = opts.nStart
@@ -142,7 +156,7 @@ if opts.did > 0:
 # load non-openml dataset
 else:
     if DATA_NAME == 'VOC':
-        X_tr, Y_tr_detection, Y_tr, X_te, Y_te_detection, Y_te = get_VOC_detection(opts.path)
+        X_tr, d_train, Y_tr, X_te, d_test, Y_te = get_VOC_detection(opts.path)
     else:
         X_tr, Y_tr, X_te, Y_te = get_dataset(DATA_NAME, opts.path)
 
@@ -150,7 +164,6 @@ else:
     handler = get_handler(opts.data)
 
 args['lr'] = opts.lr
-
 # start experiment
 n_pool = len(Y_tr)
 n_test = len(Y_te)
@@ -164,26 +177,9 @@ idxs_tmp = np.arange(n_pool)
 np.random.shuffle(idxs_tmp)
 idxs_lb[idxs_tmp[:NUM_INIT_LB]] = True
 
-
-# mlp model class
-class mlpMod(nn.Module):
-    def __init__(self, dim, embSize=256):
-        super(mlpMod, self).__init__()
-        self.embSize = embSize
-        self.dim = int(np.prod(dim))
-        self.lm1 = nn.Linear(self.dim, embSize)
-        self.lm2 = nn.Linear(embSize, opts.nClasses)
-    def forward(self, x):
-        x = x.view(-1, self.dim)
-        emb = F.relu(self.lm1(x))
-        out = self.lm2(emb)
-        return out, emb
-    def get_embedding_dim(self):
-        return self.embSize
-
 # load specified network
 if opts.model == 'mlp':
-    net = mlpMod(opts.dim, embSize=opts.nEmb)
+    net = mlpMod(opts.dim, nClasses=opts.nClasses, embSize=opts.nEmb)
 elif opts.model == 'resnet':
     net = resnet.ResNet18()
 elif opts.model == 'vgg':
@@ -232,10 +228,14 @@ print(type(strategy).__name__, flush=True)
 
 # round 0 accuracy
 strategy.train()
+if DATA_NAME == 'VOC':
+    ap = train_object_detector(d_train, d_test, opts)
+    print(str(opts.nStart) + '\ttesting mAP {}'.format(ap), flush=True)
 P = strategy.predict(X_te, Y_te)
 acc = np.zeros(NUM_ROUND+1)
 acc[0] = 1.0 * (Y_te == P).sum().item() / len(Y_te)
 print(str(opts.nStart) + '\ttesting accuracy {}'.format(acc[0]), flush=True)
+
 
 for rd in range(1, NUM_ROUND+1):
     print('Round {}'.format(rd), flush=True)
@@ -251,6 +251,10 @@ for rd in range(1, NUM_ROUND+1):
     # update
     strategy.update(idxs_lb)
     strategy.train()
+    if DATA_NAME == 'VOC':
+        subset = torch.utils.data.Subset(d_train, q_idxs)
+        ap = train_object_detector(subset, d_test, opts)
+        print(str(opts.nStart) + '\ttesting mAP {}'.format(ap), flush=True)
 
     # round accuracy
     P = strategy.predict(X_te, Y_te)
