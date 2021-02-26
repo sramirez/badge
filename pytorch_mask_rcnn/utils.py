@@ -34,7 +34,11 @@ class TextArea:
         txt = str(self)
         values = re.findall(r"(\d{3})\n", txt)
         values = [int(v) / 10 for v in values]
-        result = {"bbox AP": values[0], "mask AP": values[12]}
+        default = -1
+        try:
+            result = {"bbox AP": values[0], "mask AP": values[12]}
+        except IndexError:
+            result = {"bbox AP": default, "mask AP": default}
         return result
     
     

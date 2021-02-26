@@ -88,7 +88,7 @@ def evaluate(model, data_loader, device, args, generate=True):
 # generate results file   
 @torch.no_grad()   
 def generate_results(model, data_loader, device, args):
-    iters = len(data_loader) if args.iters < 0 else args.iters
+    iters = args.test_iter # TODO: why test has the same iters as train -> if args.iters < 0 else args.iters
     ann_labels = data_loader.ann_labels
         
     t_m = Meter("total")
@@ -97,25 +97,27 @@ def generate_results(model, data_loader, device, args):
     model.eval()
     A = time.time()
     for i, (image, target) in enumerate(data_loader):
-        T = time.time()
-        
-        image = image.to(device)
-        target = {k: v.to(device) for k, v in target.items()}
+        if target['boxes'].shape[0] > 0:
+            T = time.time()
 
-        S = time.time()
-        torch.cuda.synchronize()
-        output = model(image)
-        m_m.update(time.time() - S)
-        
-        prediction = {target["image_id"].item(): {k: v.cpu() for k, v in output.items()}}
-        coco_results.extend(prepare_for_coco(prediction, ann_labels))
+            image = image.to(device)
+            target = {k: v.to(device) for k, v in target.items()}
 
-        t_m.update(time.time() - T)
+            S = time.time()
+            torch.cuda.synchronize()
+            output = model(image)
+            m_m.update(time.time() - S)
+
+            prediction = {target["image_id"].item(): {k: v.cpu() for k, v in output.items()}}
+            coco_results.extend(prepare_for_coco(prediction, ann_labels))
+
+            t_m.update(time.time() - T)
         if i >= iters - 1:
             break
      
     A = time.time() - A 
-    print("iter: {:.1f}, total: {:.1f}, model: {:.1f}".format(1000*A/iters,1000*t_m.avg,1000*m_m.avg))
+    print("iter: {:.1f}, total: {:.1f}, model: {:.1f}, num_iter: {}".format(1000*A/iters, 1000*t_m.avg,1000*m_m.avg,
+                                                                            args.test_iter))
     
     S = time.time()
     print("all gather: {:.1f}s".format(time.time() - S))

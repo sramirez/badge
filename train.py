@@ -26,7 +26,7 @@ def main(args):
     # -------------------------------------------------------------------------- #
 
     print(args)
-    num_classes = len(d_train.dataset.classes) + 1 # including background class
+    num_classes = 20 # including background class
     model = pmr.maskrcnn_resnet50(True, num_classes).to(device)
     
     params = [p for p in model.parameters() if p.requires_grad]
@@ -107,6 +107,8 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--iters", type=int, default=200, help="max iters per epoch, -1 denotes auto")
     parser.add_argument("--print-freq", type=int, default=100, help="frequency of printing losses")
+    parser.add_argument("--test_iter", type=int, default=10, help="number of iterations during evaluation time")
+
     args = parser.parse_args()
     
     if args.lr is None:

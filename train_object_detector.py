@@ -8,7 +8,7 @@ def train_object_detector(d_train, d_test, args) -> float:
     # init model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     args.warmup_iters = max(1000, len(d_train))
-    num_classes = 21  # including background class
+    num_classes = 20  # including background class
     model = pmr.maskrcnn_resnet50(pretrained=True, num_classes=num_classes).to(device)
     params = [p for p in model.parameters() if p.requires_grad]
     optimizer = torch.optim.SGD(
