@@ -26,8 +26,8 @@ parser.add_argument('--lr', help='learning rate', type=float, default=1e-4)
 parser.add_argument('--model', help='model - resnet, vgg, or mlp', type=str, default='mlp')
 parser.add_argument('--path', help='data path', type=str, default='data')
 parser.add_argument('--data', help='dataset (non-openML)', type=str, default='')
-parser.add_argument('--nQuery', help='number of points to query in a batch', type=int, default=10)
-parser.add_argument('--nStart', help='number of points to start', type=int, default=10)
+parser.add_argument('--nQuery', help='number of points to query in a batch', type=int, default=100)
+parser.add_argument('--nStart', help='number of points to start', type=int, default=100)
 parser.add_argument('--nEnd', help='total number of points to query', type=int, default=50000)
 parser.add_argument('--nEmb', help='number of embedding dims (mlp)', type=int, default=256)
 # object detection parameters
@@ -36,7 +36,7 @@ parser.add_argument('--lr-steps', nargs="+", type=int, default=[22, 26])
 parser.add_argument("--lr_object", type=float)
 parser.add_argument("--momentum", type=float, default=0.9)
 parser.add_argument("--weight-decay", type=float, default=0.0001)
-parser.add_argument("--epochs", type=int, default=1)
+parser.add_argument("--epochs", type=int, default=10)
 parser.add_argument("--iters", type=int, default=200, help="max iters per epoch, -1 denotes auto")
 parser.add_argument("--print-freq", type=int, default=100, help="frequency of printing losses")
 parser.add_argument("--test_iter", type=int, default=100, help="number of iterations during evaluation time")
@@ -168,7 +168,7 @@ output += str(opts.nStart) + '\ttesting accuracy {}'.format(acc[0]) + '\n'
 print(output, flush=True)
 
 # Write to file
-file_object = open('results_plain.txt', 'x')
+file_object = open('results_plain.txt', 'w')
 file_object.write(output)
 file_object.close()
 

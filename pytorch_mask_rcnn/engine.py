@@ -96,6 +96,7 @@ def generate_results(model, data_loader, device, args):
     coco_results = []
     model.eval()
     A = time.time()
+    n_iters = 0
     for i, (image, target) in enumerate(data_loader):
         if target['boxes'].shape[0] > 0:
             T = time.time()
@@ -112,7 +113,8 @@ def generate_results(model, data_loader, device, args):
             coco_results.extend(prepare_for_coco(prediction, ann_labels))
 
             t_m.update(time.time() - T)
-        if i >= iters - 1:
+            n_iters += 1
+        if n_iters >= iters - 1:
             break
      
     A = time.time() - A 
