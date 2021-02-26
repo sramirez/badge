@@ -21,11 +21,11 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, args):
     b_m = Meter("backward")
     model.train()
     A = time.time()
-    n_iter = 0
+    iter_performed = 0
     for _, (image, target) in enumerate(data_loader):
         if target['boxes'].shape[0] > 0:
             T = time.time()
-            num_iters = epoch * len(data_loader) + n_iter
+            num_iters = epoch * len(data_loader) + iter_performed
             if num_iters <= args.warmup_iters:
                 r = num_iters / args.warmup_iters
                 for j, p in enumerate(optimizer.param_groups):
@@ -49,12 +49,15 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, args):
                 print("{}\t".format(num_iters), "\t".join("{:.3f}".format(l.item()) for l in losses.values()))
 
             t_m.update(time.time() - T)
-            n_iter += 1
-        if n_iter - 1 >= iters - 1:
+            iter_performed += 1
+        if iter_performed >= iters:
             break
-           
+
+    print("Model trained with {} images".format(iter_performed))
     A = time.time() - A
-    print("iter: {:.1f}, total: {:.1f}, model: {:.1f}, backward: {:.1f}".format(1000*A/iters,1000*t_m.avg,1000*m_m.avg,1000*b_m.avg))
+    print("iter: {:.1f}, total: {:.1f}, model: {:.1f}, backward: {:.1f}".format(1000*A/iters, 1000*t_m.avg,
+                                                                                1000*m_m.avg,
+                                                                                1000*b_m.avg))
     return A / iters
             
 
@@ -114,7 +117,7 @@ def generate_results(model, data_loader, device, args):
 
             t_m.update(time.time() - T)
             n_iters += 1
-        if n_iters >= iters - 1:
+        if n_iters >= iters:
             break
      
     A = time.time() - A 

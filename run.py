@@ -153,7 +153,7 @@ print(type(strategy).__name__, flush=True)
 
 # round 0 accuracy
 strategy.train()
-output = ''
+output = str(opts) + '\n'
 if DATA_NAME == 'VOC':
     subset = torch.utils.data.Subset(d_train, np.arange(len(d_train))[strategy.idxs_lb])
     opts.iters = len(subset)
@@ -172,10 +172,9 @@ file_object = open('results_plain.txt', 'w')
 file_object.write(output)
 file_object.close()
 
-
-file_object = open('results_plain.txt', 'a')
-
 for rd in range(1, NUM_ROUND+1):
+    file_object = open('results_plain.txt', 'a')
+
     print('Round {}'.format(rd), flush=True)
 
     # query
@@ -195,7 +194,7 @@ for rd in range(1, NUM_ROUND+1):
         subset = torch.utils.data.Subset(d_train, np.arange(len(d_train))[strategy.idxs_lb])
         opts.iters = len(subset)
         ap = train_object_detector(subset, d_test, opts)
-        output += str(opts.nStart) + '\ttesting mAP {}'.format(ap) + '\n'
+        output += str(len(subset)) + '\ttesting mAP {}'.format(ap) + '\n'
         print(output, flush=True)
 
     # round accuracy
@@ -206,5 +205,4 @@ for rd in range(1, NUM_ROUND+1):
     if sum(~strategy.idxs_lb) < opts.nQuery: 
         sys.exit('too few remaining points to query')
     file_object.write(output)
-
-file_object.close()
+    file_object.close()
