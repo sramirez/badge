@@ -1,0 +1,27 @@
+Namespace(alg='badge', data='VOC', did=0, dim=(128, 128, 3), epochs=10, iters=200, lr=0.0001, lr_object=0.00125, lr_steps=[22, 26], model='mlp', momentum=0.9, nClasses=2, nEmb=256, nEnd=50000, nQuery=100, nStart=100, path='data', print_freq=100, seed=3, test_iter=100, weight_decay=0.0001)
+100	testing mAP {'bbox AP': 1.4, 'mask AP': 1.2}
+100	testing accuracy 0.6246537396121884
+200	testing mAP {'bbox AP': 1.8, 'mask AP': 1.3}
+200	testing accuracy 0.6655124653739612
+300	testing mAP {'bbox AP': 2.0, 'mask AP': 1.1}
+300	testing accuracy 0.6101108033240997
+400	testing mAP {'bbox AP': 1.9, 'mask AP': 1.1}
+400	testing accuracy 0.6627423822714681
+500	testing mAP {'bbox AP': 1.9, 'mask AP': 1.1}
+500	testing accuracy 0.6620498614958449
+600	testing mAP {'bbox AP': 2.0, 'mask AP': 1.1}
+600	testing accuracy 0.6537396121883656
+700	testing mAP {'bbox AP': 2.1, 'mask AP': 0.9}
+700	testing accuracy 0.6724376731301939
+800	testing mAP {'bbox AP': 2.2, 'mask AP': 1.2}
+800	testing accuracy 0.6357340720221607
+900	testing mAP {'bbox AP': 2.0, 'mask AP': 1.2}
+900	testing accuracy 0.6530470914127424
+1000	testing mAP {'bbox AP': 2.2, 'mask AP': 1.2}
+1000	testing accuracy 0.6308864265927978
+1100	testing mAP {'bbox AP': 2.2, 'mask AP': 1.3}
+1100	testing accuracy 0.6447368421052632
+1200	testing mAP {'bbox AP': 2.1, 'mask AP': 1.0}
+1200	testing accuracy 0.6426592797783933
+1300	testing mAP {'bbox AP': 2.2, 'mask AP': 1.3}
+1300	testing accuracy 0.6343490304709142
