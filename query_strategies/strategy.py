@@ -54,9 +54,11 @@ class Strategy:
         optimizer = optim.Adam(self.clf.parameters(), lr = self.args['lr'], weight_decay=0)
 
         idxs_train = np.arange(self.n_pool)[self.idxs_lb]
-        loader_tr = DataLoader(self.handler(self.X[idxs_train], torch.Tensor(self.Y.numpy()[idxs_train]).long(),
-                                            transform=self.args['transform']),
-                               shuffle=True, **self.args['loader_tr_args'])
+        labels = self.Y.numpy()[idxs_train]
+        print("Number of elements in training: {}, number of positives examples: {}".format(len(labels), labels.sum()))
+        loader_tr = DataLoader(self.handler(self.X[idxs_train], torch.Tensor(labels).long(),
+                                            transform=self.args['transform']), shuffle=True,
+                               **self.args['loader_tr_args'])
    
         epoch = 1
         accCurrent = 0.

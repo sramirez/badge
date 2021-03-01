@@ -1,0 +1,4498 @@
+number of labeled pool: 100
+number of unlabeled pool: 1363
+number of testing pool: 1444
+VOC
+RandomSampling
+Number of elements in training: 100, number of positives examples: 28
+2 training accuracy: 0.48
+3 training accuracy: 0.74
+4 training accuracy: 0.87
+5 training accuracy: 0.81
+6 training accuracy: 0.89
+7 training accuracy: 0.95
+8 training accuracy: 0.94
+9 training accuracy: 0.98
+10 training accuracy: 0.99
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.716	0.064	2.814	0.002	0.778
+Model trained with 28 images
+iter: 60.4, total: 188.6, model: 78.1, backward: 36.2
+iter: 142.1, total: 124.7, model: 110.7, num_iter: 100
+all gather: 0.0s
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.18s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+accumulate: 0.5s
+training: 6.04 s, evaluation: 14.83 s
+mAP: {'bbox AP': 0.0, 'mask AP': 0.0}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+100	 0.713	0.064	1.585	0.009	0.543
+Model trained with 28 images
+iter: 62.2, total: 193.9, model: 79.3, backward: 39.7
+iter: 109.8, total: 92.1, model: 90.8, num_iter: 100
+all gather: 0.0s
+accumulate: 0.0s
+training: 6.22 s, evaluation: 11.04 s
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+200	 0.632	0.064	0.114	0.049	0.552
+Model trained with 28 images
+iter: 61.5, total: 194.5, model: 77.9, backward: 41.3
+iter: 111.8, total: 93.4, model: 92.1, num_iter: 100
+all gather: 0.0s
+accumulate: 0.0s
+training: 6.15 s, evaluation: 11.24 s
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+300	 0.472	0.064	0.135	0.063	0.412
+Model trained with 28 images
+iter: 64.5, total: 204.2, model: 80.9, backward: 45.3
+iter: 111.8, total: 93.6, model: 91.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.02s).
+Accumulating evaluation results...
+DONE (t=0.04s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.03s).
+Accumulating evaluation results...
+DONE (t=0.04s).
+accumulate: 0.1s
+training: 6.45 s, evaluation: 11.38 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.8}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+400	 0.237	0.064	0.117	0.077	0.307
+Model trained with 28 images
+iter: 63.6, total: 200.7, model: 78.3, backward: 46.1
+iter: 118.9, total: 100.5, model: 95.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 6.36 s, evaluation: 12.44 s
+mAP: {'bbox AP': 1.4, 'mask AP': 1.3}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+500	 0.104	0.056	0.073	0.073	0.315
+Model trained with 28 images
+iter: 68.0, total: 215.6, model: 84.0, backward: 51.0
+iter: 116.8, total: 99.3, model: 95.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 6.80 s, evaluation: 12.07 s
+mAP: {'bbox AP': 1.5, 'mask AP': 1.4}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+600	 0.072	0.044	0.054	0.059	0.248
+Model trained with 28 images
+iter: 65.1, total: 206.7, model: 80.4, backward: 49.0
+iter: 116.2, total: 98.8, model: 95.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 6.51 s, evaluation: 12.03 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+700	 0.058	0.046	0.050	0.067	0.315
+Model trained with 28 images
+iter: 63.9, total: 201.1, model: 78.7, backward: 47.7
+iter: 120.1, total: 101.0, model: 97.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.07s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 6.39 s, evaluation: 12.36 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.5}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+800	 0.062	0.064	0.059	0.051	0.251
+Model trained with 28 images
+iter: 66.0, total: 208.6, model: 81.1, backward: 50.8
+iter: 116.7, total: 98.8, model: 95.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.07s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 6.60 s, evaluation: 12.06 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.2}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+900	 0.044	0.063	0.062	0.014	0.613
+Model trained with 28 images
+iter: 64.8, total: 205.9, model: 78.9, backward: 49.0
+iter: 117.1, total: 98.2, model: 94.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 6.48 s, evaluation: 12.09 s
+mAP: {'bbox AP': 1.4, 'mask AP': 1.0}
+Namespace(alg='rand', data='VOC', did=0, dim=(128, 128, 3), epochs=10, iters=200, lr=0.0001, lr_object=0.00125, lr_steps=[22, 26], model='mlp', momentum=0.9, nClasses=2, nEmb=256, nEnd=50000, nQuery=100, nStart=100, path='data', print_freq=100, seed=3, test_iter=100, weight_decay=0.0001)
+100	testing mAP {'bbox AP': 1.4, 'mask AP': 1.0}
+
+Namespace(alg='rand', data='VOC', did=0, dim=(128, 128, 3), epochs=10, iters=200, lr=0.0001, lr_object=0.00125, lr_steps=[22, 26], model='mlp', momentum=0.9, nClasses=2, nEmb=256, nEnd=50000, nQuery=100, nStart=100, path='data', print_freq=100, seed=3, test_iter=100, weight_decay=0.0001)
+100	testing mAP {'bbox AP': 1.4, 'mask AP': 1.0}
+100	testing accuracy 0.5720221606648199
+
+Round 1
+====================== Training set size: 200
+Number of elements in training: 200, number of positives examples: 60
+2 training accuracy: 0.57
+3 training accuracy: 0.68
+4 training accuracy: 0.815
+5 training accuracy: 0.87
+6 training accuracy: 0.945
+7 training accuracy: 0.935
+8 training accuracy: 0.985
+9 training accuracy: 0.99
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.697	0.072	2.611	0.032	0.426
+Model trained with 60 images
+iter: 66.0, total: 196.1, model: 79.4, backward: 37.2
+iter: 113.1, total: 96.0, model: 94.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.00s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.00s).
+accumulate: 0.0s
+training: 13.21 s, evaluation: 11.42 s
+mAP: {'bbox AP': 0.0, 'mask AP': 0.0}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+200	 0.660	0.073	0.116	0.041	0.373
+Model trained with 60 images
+iter: 68.6, total: 205.4, model: 80.7, backward: 43.6
+iter: 128.0, total: 109.1, model: 107.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.01s).
+Accumulating evaluation results...
+DONE (t=0.02s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.01s).
+Accumulating evaluation results...
+DONE (t=0.02s).
+accumulate: 0.1s
+training: 13.73 s, evaluation: 12.92 s
+mAP: {'bbox AP': 1.1, 'mask AP': 1.9}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+400	 0.262	0.078	0.077	0.039	0.338
+Model trained with 60 images
+iter: 70.1, total: 208.4, model: 80.3, backward: 48.6
+iter: 131.6, total: 112.5, model: 106.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 14.02 s, evaluation: 13.64 s
+mAP: {'bbox AP': 1.3, 'mask AP': 1.2}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+600	 0.100	0.067	0.063	0.065	0.383
+Model trained with 60 images
+iter: 70.5, total: 210.9, model: 81.2, backward: 48.9
+iter: 118.8, total: 99.8, model: 96.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 14.10 s, evaluation: 12.29 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+800	 0.059	0.060	0.069	0.054	0.310
+Model trained with 60 images
+iter: 69.1, total: 204.7, model: 79.2, backward: 48.7
+iter: 114.7, total: 96.4, model: 93.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 13.82 s, evaluation: 11.82 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.5}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+1000	 0.042	0.050	0.039	0.035	0.299
+Model trained with 60 images
+iter: 71.2, total: 210.6, model: 81.9, backward: 50.0
+iter: 126.4, total: 105.5, model: 101.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 14.23 s, evaluation: 13.12 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.1}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+1200	 0.043	0.062	0.035	0.025	0.355
+Model trained with 60 images
+iter: 73.9, total: 218.5, model: 84.9, backward: 52.7
+iter: 129.9, total: 109.1, model: 105.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 14.78 s, evaluation: 13.39 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.3}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+1400	 0.060	0.031	0.077	0.057	0.335
+Model trained with 60 images
+iter: 76.1, total: 226.3, model: 87.8, backward: 52.4
+iter: 120.6, total: 100.7, model: 97.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 15.23 s, evaluation: 12.46 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.3}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+1600	 0.037	0.069	0.061	0.045	0.246
+Model trained with 60 images
+iter: 73.3, total: 217.1, model: 83.5, backward: 53.0
+iter: 126.8, total: 106.8, model: 103.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 14.67 s, evaluation: 13.12 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.3}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+1800	 0.024	0.047	0.046	0.040	0.321
+Model trained with 60 images
+iter: 75.3, total: 221.3, model: 86.1, backward: 56.3
+iter: 122.9, total: 102.9, model: 99.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 15.06 s, evaluation: 12.77 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.5}
+200	testing mAP {'bbox AP': 1.9, 'mask AP': 1.5}
+
+200	testing mAP {'bbox AP': 1.9, 'mask AP': 1.5}
+200	testing accuracy 0.631578947368421
+
+Round 2
+====================== Training set size: 300
+Number of elements in training: 300, number of positives examples: 90
+2 training accuracy: 0.56
+3 training accuracy: 0.7666666666666667
+4 training accuracy: 0.8233333333333334
+5 training accuracy: 0.89
+6 training accuracy: 0.9466666666666667
+7 training accuracy: 0.9766666666666667
+8 training accuracy: 0.99
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.690	0.070	2.962	0.032	0.878
+Model trained with 90 images
+iter: 70.0, total: 205.2, model: 83.5, backward: 41.5
+iter: 114.6, total: 95.6, model: 94.3, num_iter: 100
+all gather: 0.0s
+accumulate: 0.0s
+training: 20.99 s, evaluation: 11.53 s
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+300	 0.578	0.071	0.103	0.042	0.430
+Model trained with 90 images
+iter: 70.9, total: 209.4, model: 82.1, backward: 47.2
+iter: 122.2, total: 104.2, model: 98.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 21.26 s, evaluation: 12.75 s
+mAP: {'bbox AP': 1.2, 'mask AP': 1.3}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+600	 0.097	0.074	0.049	0.045	0.372
+Model trained with 90 images
+iter: 72.1, total: 213.3, model: 83.3, backward: 49.9
+iter: 127.9, total: 107.9, model: 103.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 21.62 s, evaluation: 13.22 s
+mAP: {'bbox AP': 1.4, 'mask AP': 1.1}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+900	 0.059	0.070	0.036	0.050	0.331
+Model trained with 90 images
+iter: 70.6, total: 210.3, model: 80.5, backward: 49.8
+iter: 128.1, total: 107.8, model: 103.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 21.18 s, evaluation: 13.25 s
+mAP: {'bbox AP': 1.3, 'mask AP': 0.9}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+1200	 0.040	0.048	0.061	0.066	0.283
+Model trained with 90 images
+iter: 71.7, total: 213.1, model: 82.3, backward: 51.6
+iter: 123.7, total: 104.5, model: 100.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 21.51 s, evaluation: 12.81 s
+mAP: {'bbox AP': 1.5, 'mask AP': 0.8}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+1500	 0.035	0.059	0.040	0.035	0.336
+Model trained with 90 images
+iter: 71.3, total: 211.9, model: 80.7, backward: 51.8
+iter: 124.8, total: 107.1, model: 102.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 21.38 s, evaluation: 13.00 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.1}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+1800	 0.029	0.043	0.055	0.055	0.251
+Model trained with 90 images
+iter: 73.2, total: 216.3, model: 83.0, backward: 54.0
+iter: 128.2, total: 108.0, model: 103.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.19s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 21.95 s, evaluation: 13.39 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.1}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+2100	 0.022	0.045	0.058	0.039	0.305
+Model trained with 90 images
+iter: 73.5, total: 219.4, model: 83.9, backward: 53.5
+iter: 120.2, total: 102.0, model: 98.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 22.05 s, evaluation: 12.50 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.1}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+2400	 0.026	0.041	0.052	0.061	0.285
+Model trained with 90 images
+iter: 73.1, total: 218.2, model: 82.4, backward: 53.2
+iter: 127.2, total: 106.9, model: 102.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 21.93 s, evaluation: 13.25 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.0}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+2700	 0.022	0.036	0.037	0.044	0.265
+Model trained with 90 images
+iter: 73.0, total: 217.0, model: 82.6, backward: 53.8
+iter: 116.7, total: 99.8, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 21.91 s, evaluation: 12.09 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+300	testing mAP {'bbox AP': 1.9, 'mask AP': 1.1}
+
+300	testing mAP {'bbox AP': 1.9, 'mask AP': 1.1}
+300	testing accuracy 0.6142659279778393
+
+Round 3
+====================== Training set size: 400
+Number of elements in training: 400, number of positives examples: 122
+2 training accuracy: 0.54
+3 training accuracy: 0.75
+4 training accuracy: 0.82
+5 training accuracy: 0.8825
+6 training accuracy: 0.9225
+7 training accuracy: 0.9275
+8 training accuracy: 0.9175
+9 training accuracy: 0.9375
+10 training accuracy: 0.955
+11 training accuracy: 0.985
+12 training accuracy: 0.9925
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.686	0.063	2.982	0.017	6.095
+100	 0.574	0.030	0.021	0.000	1.028
+Model trained with 122 images
+iter: 67.9, total: 199.0, model: 79.6, backward: 40.1
+iter: 114.0, total: 96.1, model: 94.8, num_iter: 100
+all gather: 0.0s
+accumulate: 0.0s
+training: 27.16 s, evaluation: 11.46 s
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+400	 0.538	0.066	0.152	0.067	0.474
+500	 0.054	0.021	0.009	0.000	0.850
+Model trained with 122 images
+iter: 69.1, total: 202.1, model: 79.6, backward: 44.3
+iter: 117.5, total: 99.8, model: 95.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 27.63 s, evaluation: 12.19 s
+mAP: {'bbox AP': 1.5, 'mask AP': 1.3}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+800	 0.080	0.057	0.055	0.074	0.472
+900	 0.038	0.017	0.008	0.003	0.483
+Model trained with 122 images
+iter: 70.0, total: 206.1, model: 79.2, backward: 47.5
+iter: 113.8, total: 96.8, model: 93.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 27.99 s, evaluation: 11.76 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.2}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+1200	 0.046	0.075	0.046	0.015	0.418
+1300	 0.039	0.017	0.007	0.001	0.472
+Model trained with 122 images
+iter: 70.8, total: 207.0, model: 80.0, backward: 49.2
+iter: 118.6, total: 100.6, model: 96.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 28.31 s, evaluation: 12.34 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.4}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+1600	 0.059	0.054	0.066	0.089	0.375
+1700	 0.032	0.014	0.011	0.009	0.387
+Model trained with 122 images
+iter: 70.8, total: 208.0, model: 79.6, backward: 49.4
+iter: 119.4, total: 101.0, model: 97.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 28.30 s, evaluation: 12.43 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+2000	 0.041	0.075	0.050	0.050	0.307
+2100	 0.034	0.012	0.015	0.013	0.578
+Model trained with 122 images
+iter: 72.2, total: 211.3, model: 80.4, backward: 52.0
+iter: 119.7, total: 101.3, model: 97.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 28.89 s, evaluation: 12.44 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+2400	 0.032	0.038	0.064	0.068	0.287
+2500	 0.029	0.007	0.015	0.014	0.395
+Model trained with 122 images
+iter: 72.2, total: 212.5, model: 80.3, backward: 52.6
+iter: 121.7, total: 102.3, model: 98.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 28.89 s, evaluation: 12.70 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.1}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+2800	 0.022	0.072	0.028	0.041	0.246
+2900	 0.026	0.008	0.011	0.013	0.285
+Model trained with 122 images
+iter: 71.8, total: 211.4, model: 79.6, backward: 52.2
+iter: 118.4, total: 100.0, model: 96.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 28.70 s, evaluation: 12.27 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.1}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+3200	 0.023	0.043	0.033	0.036	0.274
+3300	 0.020	0.008	0.009	0.014	0.284
+Model trained with 122 images
+iter: 73.1, total: 215.2, model: 80.5, backward: 54.6
+iter: 128.4, total: 108.7, model: 104.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 29.24 s, evaluation: 13.37 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+3600	 0.025	0.052	0.056	0.045	0.231
+3700	 0.021	0.006	0.017	0.014	0.332
+Model trained with 122 images
+iter: 72.9, total: 214.4, model: 80.8, backward: 53.6
+iter: 119.6, total: 100.9, model: 97.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 29.16 s, evaluation: 12.41 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.1}
+400	testing mAP {'bbox AP': 1.8, 'mask AP': 1.1}
+
+400	testing mAP {'bbox AP': 1.8, 'mask AP': 1.1}
+400	testing accuracy 0.6239612188365651
+
+Round 4
+====================== Training set size: 500
+Number of elements in training: 500, number of positives examples: 158
+2 training accuracy: 0.534
+3 training accuracy: 0.748
+4 training accuracy: 0.86
+5 training accuracy: 0.942
+6 training accuracy: 0.97
+7 training accuracy: 0.964
+8 training accuracy: 0.974
+9 training accuracy: 0.988
+10 training accuracy: 0.994
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.687	0.061	2.501	0.024	0.887
+100	 0.621	0.063	0.182	0.060	0.595
+Model trained with 158 images
+iter: 71.1, total: 201.5, model: 79.5, backward: 40.7
+iter: 114.4, total: 95.5, model: 94.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.01s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.00s).
+Accumulating evaluation results...
+DONE (t=0.01s).
+accumulate: 0.0s
+training: 35.53 s, evaluation: 11.54 s
+mAP: {'bbox AP': 1.7, 'mask AP': 2.8}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+500	 0.366	0.069	0.103	0.054	0.426
+600	 0.158	0.049	0.140	0.084	0.441
+Model trained with 158 images
+iter: 73.8, total: 209.2, model: 81.2, backward: 46.8
+iter: 121.4, total: 101.3, model: 98.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 36.92 s, evaluation: 12.58 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.6}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+1000	 0.053	0.070	0.032	0.050	0.343
+1100	 0.102	0.042	0.120	0.081	0.449
+Model trained with 158 images
+iter: 76.1, total: 215.3, model: 82.2, backward: 51.2
+iter: 114.9, total: 96.8, model: 94.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 38.07 s, evaluation: 11.87 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.5}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+1500	 0.049	0.051	0.063	0.071	0.341
+1600	 0.079	0.037	0.102	0.071	0.381
+Model trained with 158 images
+iter: 75.9, total: 214.6, model: 81.9, backward: 51.2
+iter: 126.4, total: 106.2, model: 103.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 37.95 s, evaluation: 13.06 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+2000	 0.038	0.072	0.065	0.061	0.268
+2100	 0.081	0.034	0.097	0.091	0.380
+Model trained with 158 images
+iter: 78.5, total: 220.2, model: 85.4, backward: 55.4
+iter: 125.8, total: 104.7, model: 101.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 39.24 s, evaluation: 13.01 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.1}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+2500	 0.024	0.100	0.044	0.029	0.526
+2600	 0.070	0.035	0.082	0.093	0.372
+Model trained with 158 images
+iter: 78.6, total: 222.8, model: 84.4, backward: 56.2
+iter: 130.9, total: 110.9, model: 106.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 39.31 s, evaluation: 13.65 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+3000	 0.047	0.059	0.091	0.068	0.408
+3100	 0.080	0.028	0.064	0.085	0.337
+Model trained with 158 images
+iter: 76.5, total: 218.0, model: 81.7, backward: 54.4
+iter: 117.7, total: 99.8, model: 96.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 38.27 s, evaluation: 12.24 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+3500	 0.019	0.037	0.086	0.036	0.337
+3600	 0.065	0.029	0.041	0.052	0.342
+Model trained with 158 images
+iter: 74.7, total: 213.0, model: 79.2, backward: 53.3
+iter: 118.0, total: 100.2, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 37.33 s, evaluation: 12.24 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+4000	 0.020	0.032	0.056	0.044	0.282
+4100	 0.060	0.028	0.067	0.046	0.333
+Model trained with 158 images
+iter: 75.7, total: 216.2, model: 79.7, backward: 55.7
+iter: 118.5, total: 100.5, model: 97.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 37.84 s, evaluation: 12.33 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.0}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+4500	 0.016	0.063	0.032	0.029	0.278
+4600	 0.061	0.025	0.054	0.038	0.313
+Model trained with 158 images
+iter: 75.2, total: 215.2, model: 79.5, backward: 54.1
+iter: 118.4, total: 100.1, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 37.60 s, evaluation: 12.27 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.0}
+500	testing mAP {'bbox AP': 1.6, 'mask AP': 1.0}
+
+500	testing mAP {'bbox AP': 1.6, 'mask AP': 1.0}
+500	testing accuracy 0.6301939058171745
+
+Round 5
+====================== Training set size: 600
+Number of elements in training: 600, number of positives examples: 189
+2 training accuracy: 0.5616666666666666
+3 training accuracy: 0.71
+4 training accuracy: 0.805
+5 training accuracy: 0.8416666666666667
+6 training accuracy: 0.9183333333333333
+7 training accuracy: 0.915
+8 training accuracy: 0.9616666666666667
+9 training accuracy: 0.9833333333333333
+10 training accuracy: 0.9883333333333333
+11 training accuracy: 0.985
+12 training accuracy: 0.9933333333333333
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.683	0.073	2.958	0.030	4.252
+100	 0.546	0.006	0.033	0.002	1.208
+Model trained with 189 images
+iter: 70.6, total: 200.2, model: 79.1, backward: 41.8
+iter: 115.0, total: 98.0, model: 94.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 42.33 s, evaluation: 11.89 s
+mAP: {'bbox AP': 0.8, 'mask AP': 0.9}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+600	 0.202	0.081	0.066	0.060	0.481
+700	 0.022	0.003	0.019	0.007	0.578
+Model trained with 189 images
+iter: 72.3, total: 206.0, model: 79.5, backward: 47.1
+iter: 118.1, total: 99.6, model: 96.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 43.41 s, evaluation: 12.21 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.4}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+1200	 0.054	0.077	0.037	0.043	0.386
+1300	 0.013	0.002	0.019	0.011	0.749
+Model trained with 189 images
+iter: 72.8, total: 208.6, model: 79.0, backward: 49.3
+iter: 116.8, total: 98.8, model: 95.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 43.69 s, evaluation: 12.10 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.5}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+1800	 0.040	0.045	0.080	0.084	0.313
+1900	 0.010	0.003	0.010	0.004	0.431
+Model trained with 189 images
+iter: 73.3, total: 209.6, model: 79.2, backward: 50.2
+iter: 117.7, total: 99.8, model: 96.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 43.98 s, evaluation: 12.19 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+2400	 0.037	0.084	0.068	0.044	0.308
+2500	 0.006	0.003	0.011	0.011	0.365
+Model trained with 189 images
+iter: 73.9, total: 210.7, model: 79.6, backward: 51.4
+iter: 115.3, total: 98.1, model: 95.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 44.31 s, evaluation: 11.95 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.0}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+3000	 0.024	0.073	0.049	0.041	0.310
+3100	 0.004	0.003	0.011	0.004	0.365
+Model trained with 189 images
+iter: 73.3, total: 209.8, model: 78.6, backward: 52.1
+iter: 118.5, total: 99.3, model: 95.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 43.96 s, evaluation: 12.27 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+3600	 0.019	0.050	0.030	0.019	0.362
+3700	 0.004	0.002	0.012	0.012	0.292
+Model trained with 189 images
+iter: 73.8, total: 211.3, model: 78.7, backward: 53.5
+iter: 120.0, total: 100.8, model: 97.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 44.28 s, evaluation: 12.52 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.4}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+4200	 0.034	0.058	0.040	0.040	0.379
+4300	 0.002	0.003	0.007	0.001	0.291
+Model trained with 189 images
+iter: 74.1, total: 212.1, model: 79.0, backward: 53.1
+iter: 119.9, total: 100.8, model: 97.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 44.44 s, evaluation: 12.42 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.4}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+4800	 0.017	0.036	0.059	0.062	0.308
+4900	 0.002	0.002	0.003	0.002	0.273
+Model trained with 189 images
+iter: 74.3, total: 212.6, model: 79.2, backward: 53.9
+iter: 130.8, total: 108.4, model: 104.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 44.58 s, evaluation: 13.67 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+5400	 0.016	0.033	0.043	0.042	0.303
+5500	 0.002	0.002	0.006	0.011	0.336
+Model trained with 189 images
+iter: 77.9, total: 222.8, model: 82.4, backward: 57.4
+iter: 119.1, total: 101.2, model: 97.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.23s).
+Accumulating evaluation results...
+DONE (t=0.13s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.18s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.6s
+training: 46.72 s, evaluation: 12.66 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+600	testing mAP {'bbox AP': 1.9, 'mask AP': 1.2}
+
+600	testing mAP {'bbox AP': 1.9, 'mask AP': 1.2}
+600	testing accuracy 0.5955678670360111
+
+Round 6
+====================== Training set size: 700
+Number of elements in training: 700, number of positives examples: 217
+2 training accuracy: 0.5928571428571429
+3 training accuracy: 0.7
+4 training accuracy: 0.7557142857142857
+5 training accuracy: 0.8514285714285714
+6 training accuracy: 0.9042857142857142
+7 training accuracy: 0.9285714285714286
+8 training accuracy: 0.9671428571428572
+9 training accuracy: 0.9857142857142858
+10 training accuracy: 0.9914285714285714
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.699	0.066	3.214	0.040	1.454
+100	 0.588	0.004	0.045	0.003	0.518
+200	 0.125	0.033	0.036	0.039	0.140
+Model trained with 217 images
+iter: 73.4, total: 211.5, model: 83.2, backward: 45.0
+iter: 120.8, total: 103.2, model: 97.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 51.36 s, evaluation: 12.62 s
+mAP: {'bbox AP': 1.1, 'mask AP': 1.0}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+700	 0.136	0.064	0.061	0.056	0.655
+800	 0.042	0.003	0.045	0.016	0.304
+900	 0.041	0.013	0.019	0.024	0.123
+Model trained with 217 images
+iter: 71.2, total: 205.9, model: 79.2, backward: 46.8
+iter: 116.8, total: 98.2, model: 94.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 49.84 s, evaluation: 12.16 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.0}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+1400	 0.062	0.051	0.066	0.054	0.441
+1500	 0.027	0.003	0.030	0.013	0.143
+1600	 0.021	0.010	0.019	0.013	0.111
+Model trained with 217 images
+iter: 72.1, total: 209.3, model: 79.4, backward: 49.8
+iter: 119.0, total: 100.0, model: 96.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 50.50 s, evaluation: 12.32 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+2100	 0.038	0.056	0.055	0.033	0.517
+2200	 0.059	0.003	0.040	0.014	0.182
+2300	 0.014	0.013	0.010	0.003	0.113
+Model trained with 217 images
+iter: 72.8, total: 210.6, model: 79.6, backward: 51.3
+iter: 115.6, total: 98.3, model: 95.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 50.95 s, evaluation: 12.00 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.4}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+2800	 0.039	0.034	0.082	0.068	0.282
+2900	 0.026	0.003	0.011	0.008	0.124
+3000	 0.007	0.010	0.012	0.003	0.111
+Model trained with 217 images
+iter: 73.2, total: 212.1, model: 79.3, backward: 52.9
+iter: 118.4, total: 98.9, model: 95.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 51.21 s, evaluation: 12.26 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.4}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+3500	 0.026	0.045	0.075	0.053	0.403
+3600	 0.026	0.002	0.020	0.012	0.102
+3700	 0.012	0.013	0.019	0.005	0.096
+Model trained with 217 images
+iter: 74.0, total: 214.4, model: 80.5, backward: 53.7
+iter: 121.2, total: 101.2, model: 98.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 51.80 s, evaluation: 12.60 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+4200	 0.019	0.047	0.036	0.038	0.228
+4300	 0.015	0.003	0.012	0.016	0.086
+4400	 0.007	0.016	0.011	0.006	0.103
+Model trained with 217 images
+iter: 74.9, total: 216.5, model: 81.3, backward: 55.1
+iter: 124.8, total: 104.1, model: 100.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 52.46 s, evaluation: 12.96 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+4900	 0.021	0.034	0.043	0.046	0.301
+5000	 0.019	0.002	0.014	0.006	0.087
+5100	 0.012	0.020	0.023	0.003	0.104
+Model trained with 217 images
+iter: 77.8, total: 223.6, model: 84.8, backward: 57.6
+iter: 116.8, total: 99.2, model: 96.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 54.49 s, evaluation: 12.14 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+5600	 0.019	0.050	0.046	0.024	0.342
+5700	 0.015	0.002	0.006	0.015	0.083
+5800	 0.005	0.015	0.008	0.003	0.113
+Model trained with 217 images
+iter: 73.1, total: 212.6, model: 78.6, backward: 54.1
+iter: 117.0, total: 99.1, model: 96.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 51.18 s, evaluation: 12.13 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+6300	 0.016	0.038	0.030	0.030	0.294
+6400	 0.012	0.002	0.010	0.006	0.086
+6500	 0.028	0.011	0.005	0.011	0.122
+Model trained with 217 images
+iter: 73.0, total: 211.3, model: 78.6, backward: 54.3
+iter: 116.5, total: 98.6, model: 95.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 51.12 s, evaluation: 12.11 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.4}
+700	testing mAP {'bbox AP': 2.0, 'mask AP': 1.4}
+
+700	testing mAP {'bbox AP': 2.0, 'mask AP': 1.4}
+700	testing accuracy 0.6523545706371191
+
+Round 7
+====================== Training set size: 800
+Number of elements in training: 800, number of positives examples: 235
+2 training accuracy: 0.6075
+3 training accuracy: 0.7475
+4 training accuracy: 0.79875
+5 training accuracy: 0.85875
+6 training accuracy: 0.89625
+7 training accuracy: 0.92
+8 training accuracy: 0.95375
+9 training accuracy: 0.97375
+10 training accuracy: 0.9725
+11 training accuracy: 0.98625
+12 training accuracy: 0.99125
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.689	0.063	2.948	0.012	0.995
+100	 0.560	0.008	0.049	0.001	0.471
+200	 0.206	0.019	0.055	0.033	0.187
+Model trained with 235 images
+iter: 66.2, total: 200.2, model: 79.4, backward: 41.9
+iter: 121.5, total: 102.7, model: 97.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 53.00 s, evaluation: 12.66 s
+mAP: {'bbox AP': 0.9, 'mask AP': 0.9}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+800	 0.123	0.069	0.054	0.053	0.543
+900	 0.021	0.008	0.016	0.002	0.503
+1000	 0.083	0.012	0.051	0.036	0.163
+Model trained with 235 images
+iter: 67.0, total: 203.7, model: 78.6, backward: 46.6
+iter: 115.8, total: 97.9, model: 94.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 53.61 s, evaluation: 12.06 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.4}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+1600	 0.056	0.119	0.043	0.065	0.370
+1700	 0.016	0.006	0.011	0.001	0.650
+1800	 0.035	0.011	0.024	0.024	0.167
+Model trained with 235 images
+iter: 68.2, total: 206.4, model: 79.2, backward: 49.7
+iter: 125.4, total: 104.0, model: 100.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 54.60 s, evaluation: 13.01 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.3}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+2400	 0.043	0.050	0.059	0.056	0.364
+2500	 0.015	0.006	0.011	0.005	0.515
+2600	 0.021	0.007	0.010	0.004	0.145
+Model trained with 235 images
+iter: 70.3, total: 212.7, model: 81.0, backward: 52.7
+iter: 119.9, total: 101.2, model: 97.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 56.21 s, evaluation: 12.44 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.4}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+3200	 0.033	0.047	0.065	0.058	0.379
+3300	 0.011	0.005	0.011	0.005	0.432
+3400	 0.014	0.011	0.009	0.008	0.126
+Model trained with 235 images
+iter: 69.8, total: 212.0, model: 79.8, backward: 54.1
+iter: 119.1, total: 101.1, model: 97.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 55.87 s, evaluation: 12.32 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+4000	 0.033	0.041	0.066	0.060	0.315
+4100	 0.009	0.004	0.018	0.019	0.282
+4200	 0.017	0.009	0.011	0.006	0.125
+Model trained with 235 images
+iter: 71.8, total: 218.1, model: 81.8, backward: 56.9
+iter: 115.9, total: 99.3, model: 96.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 57.47 s, evaluation: 12.02 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+4800	 0.021	0.087	0.047	0.034	0.308
+4900	 0.008	0.004	0.009	0.005	0.266
+5000	 0.014	0.010	0.009	0.007	0.118
+Model trained with 235 images
+iter: 71.3, total: 216.8, model: 81.0, backward: 56.2
+iter: 120.1, total: 101.4, model: 98.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 57.02 s, evaluation: 12.40 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+5600	 0.017	0.038	0.041	0.027	0.314
+5700	 0.007	0.003	0.004	0.006	0.275
+5800	 0.012	0.008	0.018	0.009	0.143
+Model trained with 235 images
+iter: 70.7, total: 216.0, model: 80.2, backward: 56.4
+iter: 116.1, total: 98.4, model: 95.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 56.56 s, evaluation: 12.02 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.3}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+6400	 0.016	0.040	0.044	0.042	0.350
+6500	 0.014	0.003	0.009	0.009	0.250
+6600	 0.003	0.008	0.014	0.006	0.132
+Model trained with 235 images
+iter: 70.8, total: 215.5, model: 80.3, backward: 56.1
+iter: 126.1, total: 106.0, model: 102.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 56.63 s, evaluation: 13.09 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+7200	 0.014	0.061	0.031	0.038	0.278
+7300	 0.005	0.003	0.013	0.018	0.257
+7400	 0.008	0.011	0.013	0.004	0.097
+Model trained with 235 images
+iter: 70.4, total: 214.2, model: 79.9, backward: 55.7
+iter: 119.6, total: 100.7, model: 97.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 56.35 s, evaluation: 12.40 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+800	testing mAP {'bbox AP': 2.0, 'mask AP': 1.3}
+
+800	testing mAP {'bbox AP': 2.0, 'mask AP': 1.3}
+800	testing accuracy 0.6578947368421053
+
+Round 8
+====================== Training set size: 900
+Number of elements in training: 900, number of positives examples: 268
+2 training accuracy: 0.5866666666666667
+3 training accuracy: 0.72
+4 training accuracy: 0.7922222222222223
+5 training accuracy: 0.8511111111111112
+6 training accuracy: 0.9122222222222223
+7 training accuracy: 0.94
+8 training accuracy: 0.9688888888888889
+9 training accuracy: 0.9822222222222222
+10 training accuracy: 0.99
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.712	0.056	2.766	0.008	0.909
+100	 0.633	0.613	0.143	0.058	0.358
+200	 0.284	0.148	0.088	0.059	0.232
+Model trained with 268 images
+iter: 66.8, total: 200.2, model: 78.9, backward: 42.0
+iter: 118.4, total: 101.9, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 60.10 s, evaluation: 12.35 s
+mAP: {'bbox AP': 1.1, 'mask AP': 1.2}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+900	 0.099	0.061	0.037	0.028	0.504
+1000	 0.230	0.415	0.101	0.102	0.554
+1100	 0.080	0.132	0.051	0.032	0.389
+Model trained with 268 images
+iter: 70.3, total: 211.3, model: 81.0, backward: 48.7
+iter: 128.0, total: 109.4, model: 104.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 63.30 s, evaluation: 13.33 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.2}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+1800	 0.061	0.066	0.079	0.063	0.329
+1900	 0.123	0.382	0.049	0.053	0.495
+2000	 0.063	0.106	0.025	0.012	0.199
+Model trained with 268 images
+iter: 69.6, total: 208.6, model: 79.3, backward: 50.4
+iter: 118.0, total: 99.9, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 62.60 s, evaluation: 12.26 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.4}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+2700	 0.036	0.051	0.052	0.069	0.293
+2800	 0.100	0.324	0.041	0.044	0.313
+2900	 0.022	0.182	0.016	0.015	0.199
+Model trained with 268 images
+iter: 70.5, total: 212.0, model: 79.5, backward: 53.5
+iter: 117.7, total: 99.7, model: 96.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 63.48 s, evaluation: 12.19 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+3600	 0.033	0.040	0.061	0.046	0.285
+3700	 0.064	0.305	0.044	0.036	0.263
+3800	 0.056	0.119	0.018	0.011	0.196
+Model trained with 268 images
+iter: 70.4, total: 212.1, model: 79.4, backward: 53.3
+iter: 115.5, total: 98.7, model: 95.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 63.39 s, evaluation: 11.97 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.3}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+4500	 0.025	0.070	0.031	0.034	0.296
+4600	 0.082	0.293	0.032	0.024	0.171
+4700	 0.019	0.090	0.016	0.009	0.184
+Model trained with 268 images
+iter: 72.5, total: 218.6, model: 81.0, backward: 56.2
+iter: 118.0, total: 100.2, model: 97.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 65.21 s, evaluation: 12.23 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+5400	 0.016	0.049	0.031	0.035	0.267
+5500	 0.065	0.298	0.030	0.038	0.190
+5600	 0.021	0.108	0.010	0.004	0.188
+Model trained with 268 images
+iter: 71.2, total: 214.3, model: 79.6, backward: 55.4
+iter: 122.0, total: 103.1, model: 99.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 64.05 s, evaluation: 12.76 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+6300	 0.018	0.034	0.036	0.024	0.231
+6400	 0.031	0.299	0.039	0.036	0.208
+6500	 0.008	0.088	0.020	0.007	0.173
+Model trained with 268 images
+iter: 71.8, total: 215.2, model: 80.9, backward: 55.6
+iter: 119.7, total: 101.0, model: 97.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 64.62 s, evaluation: 12.45 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+7200	 0.013	0.047	0.035	0.035	0.337
+7300	 0.037	0.254	0.038	0.042	0.188
+7400	 0.008	0.072	0.010	0.004	0.172
+Model trained with 268 images
+iter: 71.1, total: 214.0, model: 79.1, backward: 56.2
+iter: 117.8, total: 100.2, model: 97.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 63.97 s, evaluation: 12.24 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+8100	 0.010	0.082	0.028	0.025	0.402
+8200	 0.070	0.279	0.020	0.031	0.151
+8300	 0.006	0.064	0.009	0.003	0.173
+Model trained with 268 images
+iter: 71.0, total: 213.8, model: 79.3, backward: 55.6
+iter: 119.9, total: 101.8, model: 98.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 63.93 s, evaluation: 12.44 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.0}
+900	testing mAP {'bbox AP': 1.7, 'mask AP': 1.0}
+
+900	testing mAP {'bbox AP': 1.7, 'mask AP': 1.0}
+900	testing accuracy 0.6045706371191135
+
+Round 9
+====================== Training set size: 1000
+Number of elements in training: 1000, number of positives examples: 298
+2 training accuracy: 0.606
+3 training accuracy: 0.764
+4 training accuracy: 0.86
+5 training accuracy: 0.919
+6 training accuracy: 0.956
+7 training accuracy: 0.978
+8 training accuracy: 0.992
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.693	0.103	3.005	0.027	1.660
+100	 0.571	0.005	0.118	0.029	0.557
+200	 0.243	0.366	0.015	0.000	0.671
+Model trained with 298 images
+iter: 67.1, total: 200.5, model: 79.1, backward: 42.8
+iter: 125.8, total: 105.8, model: 99.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 67.13 s, evaluation: 13.14 s
+mAP: {'bbox AP': 1.3, 'mask AP': 1.1}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+1000	 0.202	0.058	0.028	0.036	0.124
+1100	 0.034	0.011	0.036	0.010	0.178
+1200	 0.234	0.230	0.007	0.000	0.493
+Model trained with 298 images
+iter: 69.5, total: 208.3, model: 80.0, backward: 48.8
+iter: 121.3, total: 103.1, model: 98.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 69.48 s, evaluation: 12.66 s
+mAP: {'bbox AP': 1.7, 'mask AP': 1.1}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+2000	 0.069	0.082	0.018	0.012	0.163
+2100	 0.016	0.004	0.026	0.017	0.176
+2200	 0.211	0.179	0.006	0.000	0.452
+Model trained with 298 images
+iter: 69.6, total: 209.6, model: 79.1, backward: 50.9
+iter: 117.9, total: 100.3, model: 96.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 69.58 s, evaluation: 12.22 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.4}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+3000	 0.063	0.059	0.017	0.020	0.116
+3100	 0.017	0.003	0.020	0.017	0.170
+3200	 0.144	0.206	0.004	0.000	0.412
+Model trained with 298 images
+iter: 70.3, total: 211.8, model: 79.3, backward: 52.6
+iter: 119.7, total: 100.2, model: 97.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 70.32 s, evaluation: 12.37 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+4000	 0.048	0.048	0.020	0.006	0.102
+4100	 0.008	0.003	0.028	0.033	0.127
+4200	 0.134	0.153	0.004	0.000	0.446
+Model trained with 298 images
+iter: 70.5, total: 213.1, model: 78.9, backward: 54.6
+iter: 117.8, total: 100.1, model: 97.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 70.45 s, evaluation: 12.20 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+5000	 0.020	0.064	0.007	0.006	0.093
+5100	 0.010	0.005	0.019	0.036	0.124
+5200	 0.108	0.151	0.010	0.004	0.426
+Model trained with 298 images
+iter: 71.1, total: 214.3, model: 79.3, backward: 55.8
+iter: 118.9, total: 100.5, model: 97.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 71.10 s, evaluation: 12.36 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+6000	 0.022	0.052	0.012	0.005	0.092
+6100	 0.006	0.003	0.021	0.045	0.123
+6200	 0.136	0.114	0.006	0.003	0.290
+Model trained with 298 images
+iter: 70.7, total: 213.5, model: 78.8, backward: 55.4
+iter: 120.4, total: 101.4, model: 98.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 70.74 s, evaluation: 12.47 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+7000	 0.039	0.047	0.009	0.005	0.090
+7100	 0.006	0.002	0.011	0.030	0.126
+7200	 0.074	0.133	0.007	0.000	0.289
+Model trained with 298 images
+iter: 71.0, total: 213.7, model: 79.0, backward: 56.5
+iter: 116.2, total: 99.2, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 71.04 s, evaluation: 12.04 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+8000	 0.017	0.043	0.009	0.003	0.085
+8100	 0.002	0.003	0.022	0.035	0.119
+8200	 0.082	0.096	0.014	0.001	0.247
+Model trained with 298 images
+iter: 72.1, total: 217.5, model: 80.3, backward: 57.5
+iter: 116.4, total: 99.6, model: 96.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.3s
+training: 72.12 s, evaluation: 12.04 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+9000	 0.018	0.032	0.006	0.004	0.084
+9100	 0.009	0.003	0.018	0.015	0.100
+9200	 0.050	0.106	0.004	0.001	0.242
+Model trained with 298 images
+iter: 73.8, total: 221.9, model: 82.1, backward: 58.4
+iter: 118.1, total: 99.2, model: 96.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 73.83 s, evaluation: 12.21 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.1}
+1000	testing mAP {'bbox AP': 1.8, 'mask AP': 1.1}
+
+1000	testing mAP {'bbox AP': 1.8, 'mask AP': 1.1}
+1000	testing accuracy 0.6502770083102493
+
+Round 10
+====================== Training set size: 1100
+Number of elements in training: 1100, number of positives examples: 323
+2 training accuracy: 0.5909090909090909
+3 training accuracy: 0.7736363636363637
+4 training accuracy: 0.8709090909090909
+5 training accuracy: 0.889090909090909
+6 training accuracy: 0.9545454545454546
+7 training accuracy: 0.95
+8 training accuracy: 0.9481818181818182
+9 training accuracy: 0.9754545454545455
+10 training accuracy: 0.9918181818181818
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.696	0.101	3.170	0.059	1.505
+100	 0.629	0.033	0.113	0.050	0.188
+200	 0.404	0.089	0.135	0.108	0.172
+300	 0.073	0.014	0.022	0.056	0.178
+Model trained with 323 images
+iter: 66.0, total: 198.9, model: 79.2, backward: 42.5
+iter: 119.2, total: 101.8, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.19s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 72.59 s, evaluation: 12.45 s
+mAP: {'bbox AP': 1.0, 'mask AP': 0.7}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+1100	 0.145	0.057	0.029	0.044	0.185
+1200	 0.134	0.055	0.041	0.022	0.379
+1300	 0.096	0.093	0.103	0.116	0.160
+1400	 0.023	0.014	0.011	0.015	0.119
+Model trained with 323 images
+iter: 67.6, total: 205.7, model: 79.0, backward: 47.9
+iter: 118.2, total: 100.2, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 74.31 s, evaluation: 12.26 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.0}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+2200	 0.073	0.099	0.036	0.032	0.192
+2300	 0.072	0.038	0.050	0.026	0.252
+2400	 0.109	0.102	0.043	0.039	0.153
+2500	 0.015	0.012	0.012	0.011	0.124
+Model trained with 323 images
+iter: 68.5, total: 208.1, model: 79.2, backward: 50.2
+iter: 120.8, total: 101.6, model: 97.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 75.30 s, evaluation: 12.59 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+3300	 0.035	0.096	0.013	0.006	0.097
+3400	 0.042	0.043	0.025	0.009	0.134
+3500	 0.056	0.071	0.078	0.039	0.137
+3600	 0.015	0.011	0.008	0.009	0.129
+Model trained with 323 images
+iter: 68.9, total: 209.3, model: 79.4, backward: 51.6
+iter: 119.5, total: 101.3, model: 97.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 75.76 s, evaluation: 12.43 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.1}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+4400	 0.036	0.056	0.004	0.005	0.100
+4500	 0.031	0.049	0.019	0.010	0.118
+4600	 0.056	0.037	0.055	0.050	0.128
+4700	 0.013	0.011	0.017	0.008	0.118
+Model trained with 323 images
+iter: 69.2, total: 211.0, model: 79.0, backward: 53.1
+iter: 118.6, total: 99.9, model: 96.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 76.15 s, evaluation: 12.31 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+5500	 0.020	0.081	0.012	0.011	0.095
+5600	 0.011	0.042	0.034	0.007	0.111
+5700	 0.047	0.073	0.036	0.033	0.123
+5800	 0.010	0.011	0.017	0.006	0.105
+Model trained with 323 images
+iter: 69.5, total: 212.5, model: 79.0, backward: 54.4
+iter: 117.5, total: 99.4, model: 96.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 76.43 s, evaluation: 12.18 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+6600	 0.031	0.058	0.013	0.005	0.085
+6700	 0.015	0.045	0.018	0.009	0.105
+6800	 0.036	0.061	0.041	0.016	0.111
+6900	 0.014	0.006	0.017	0.005	0.101
+Model trained with 323 images
+iter: 69.7, total: 212.8, model: 79.2, backward: 55.3
+iter: 117.2, total: 99.5, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 76.71 s, evaluation: 12.17 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+7700	 0.017	0.048	0.008	0.003	0.092
+7800	 0.013	0.039	0.016	0.004	0.101
+7900	 0.039	0.041	0.027	0.012	0.109
+8000	 0.011	0.009	0.008	0.009	0.095
+Model trained with 323 images
+iter: 70.0, total: 214.2, model: 79.0, backward: 55.5
+iter: 116.8, total: 99.5, model: 96.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 76.97 s, evaluation: 12.09 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+8800	 0.020	0.055	0.020	0.007	0.103
+8900	 0.007	0.025	0.024	0.009	0.106
+9000	 0.031	0.054	0.025	0.009	0.107
+9100	 0.006	0.004	0.012	0.005	0.101
+Model trained with 323 images
+iter: 70.0, total: 214.4, model: 79.2, backward: 55.5
+iter: 118.1, total: 99.5, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 77.05 s, evaluation: 12.26 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+9900	 0.016	0.050	0.019	0.004	0.088
+10000	 0.016	0.037	0.014	0.005	0.098
+10100	 0.016	0.060	0.023	0.010	0.102
+10200	 0.010	0.006	0.017	0.002	0.096
+Model trained with 323 images
+iter: 70.4, total: 215.8, model: 79.3, backward: 56.5
+iter: 117.0, total: 99.4, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 77.46 s, evaluation: 12.10 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+1100	testing mAP {'bbox AP': 2.0, 'mask AP': 1.2}
+
+1100	testing mAP {'bbox AP': 2.0, 'mask AP': 1.2}
+1100	testing accuracy 0.6329639889196675
+
+Round 11
+====================== Training set size: 1200
+Number of elements in training: 1200, number of positives examples: 356
+2 training accuracy: 0.58
+3 training accuracy: 0.7416666666666667
+4 training accuracy: 0.8325
+5 training accuracy: 0.91
+6 training accuracy: 0.9583333333333334
+7 training accuracy: 0.9775
+8 training accuracy: 0.9908333333333333
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.690	0.124	2.497	0.022	3.102
+100	 0.555	0.116	0.034	0.002	0.558
+200	 0.166	0.072	0.056	0.011	0.732
+300	 0.081	0.013	0.068	0.053	0.245
+Model trained with 356 images
+iter: 67.0, total: 201.5, model: 79.2, backward: 43.3
+iter: 122.5, total: 103.9, model: 98.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 80.42 s, evaluation: 12.80 s
+mAP: {'bbox AP': 1.4, 'mask AP': 1.3}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+1200	 0.196	0.068	0.020	0.027	0.144
+1300	 0.163	0.060	0.032	0.014	0.428
+1400	 0.080	0.060	0.046	0.010	0.495
+1500	 0.090	0.009	0.035	0.014	0.181
+Model trained with 356 images
+iter: 68.6, total: 207.2, model: 78.8, backward: 48.6
+iter: 128.8, total: 109.6, model: 104.1, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.5s
+training: 82.29 s, evaluation: 13.43 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.1}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+2400	 0.071	0.129	0.022	0.016	0.213
+2500	 0.121	0.064	0.027	0.018	0.442
+2600	 0.088	0.019	0.051	0.024	0.394
+2700	 0.038	0.010	0.022	0.006	0.173
+Model trained with 356 images
+iter: 72.5, total: 218.7, model: 82.6, backward: 54.4
+iter: 122.4, total: 103.3, model: 98.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.17s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 86.99 s, evaluation: 12.81 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+3600	 0.034	0.100	0.009	0.005	0.119
+3700	 0.085	0.061	0.026	0.020	0.369
+3800	 0.058	0.022	0.028	0.018	0.391
+3900	 0.013	0.011	0.019	0.008	0.122
+Model trained with 356 images
+iter: 69.7, total: 209.9, model: 79.0, backward: 52.9
+iter: 117.1, total: 99.7, model: 96.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.4s
+training: 83.64 s, evaluation: 12.16 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.3}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+4800	 0.029	0.060	0.015	0.005	0.106
+4900	 0.070	0.059	0.021	0.026	0.386
+5000	 0.052	0.019	0.052	0.033	0.338
+5100	 0.011	0.008	0.029	0.020	0.123
+Model trained with 356 images
+iter: 70.2, total: 213.2, model: 78.4, backward: 56.0
+iter: 117.1, total: 99.4, model: 96.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 84.27 s, evaluation: 12.16 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+6000	 0.029	0.082	0.006	0.005	0.101
+6100	 0.049	0.056	0.024	0.024	0.355
+6200	 0.038	0.023	0.039	0.028	0.370
+6300	 0.007	0.013	0.011	0.009	0.111
+Model trained with 356 images
+iter: 70.2, total: 212.7, model: 78.6, backward: 54.7
+iter: 118.0, total: 99.6, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 84.24 s, evaluation: 12.25 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+7200	 0.022	0.063	0.018	0.006	0.097
+7300	 0.041	0.049	0.039	0.038	0.351
+7400	 0.035	0.019	0.028	0.034	0.359
+7500	 0.006	0.012	0.005	0.006	0.122
+Model trained with 356 images
+iter: 70.4, total: 213.1, model: 78.7, backward: 55.3
+iter: 117.1, total: 100.1, model: 96.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 84.52 s, evaluation: 12.13 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.1}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+8400	 0.016	0.060	0.010	0.005	0.093
+8500	 0.034	0.040	0.037	0.037	0.350
+8600	 0.028	0.018	0.025	0.024	0.336
+8700	 0.011	0.011	0.007	0.007	0.110
+Model trained with 356 images
+iter: 70.3, total: 211.9, model: 78.9, backward: 54.8
+iter: 119.2, total: 100.7, model: 97.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 84.37 s, evaluation: 12.41 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+9600	 0.015	0.060	0.006	0.005	0.087
+9700	 0.026	0.040	0.036	0.022	0.341
+9800	 0.032	0.016	0.039	0.035	0.324
+9900	 0.002	0.014	0.011	0.004	0.113
+Model trained with 356 images
+iter: 70.5, total: 213.2, model: 78.9, backward: 55.7
+iter: 116.5, total: 99.1, model: 96.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 84.66 s, evaluation: 12.02 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+10800	 0.012	0.066	0.012	0.004	0.086
+10900	 0.023	0.044	0.047	0.034	0.377
+11000	 0.030	0.017	0.020	0.032	0.355
+11100	 0.002	0.013	0.003	0.004	0.111
+Model trained with 356 images
+iter: 70.7, total: 213.7, model: 79.0, backward: 56.2
+iter: 118.9, total: 100.6, model: 97.7, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 84.85 s, evaluation: 12.35 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+1200	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+
+1200	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+1200	testing accuracy 0.6537396121883656
+
+Round 12
+====================== Training set size: 1300
+Number of elements in training: 1300, number of positives examples: 388
+2 training accuracy: 0.6184615384615385
+3 training accuracy: 0.7561538461538462
+4 training accuracy: 0.8123076923076923
+5 training accuracy: 0.8792307692307693
+6 training accuracy: 0.9292307692307692
+7 training accuracy: 0.9607692307692308
+8 training accuracy: 0.9661538461538461
+9 training accuracy: 0.9823076923076923
+10 training accuracy: 0.9838461538461538
+11 training accuracy: 0.9961538461538462
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.691	0.108	3.194	0.055	3.815
+100	 0.603	0.030	0.133	0.075	0.348
+200	 0.315	0.040	0.083	0.041	0.262
+300	 0.024	0.003	0.020	0.016	0.347
+Model trained with 388 images
+iter: 68.9, total: 204.5, model: 81.3, backward: 43.3
+iter: 126.3, total: 106.4, model: 100.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 89.53 s, evaluation: 13.18 s
+mAP: {'bbox AP': 1.3, 'mask AP': 1.3}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+1300	 0.158	0.053	0.021	0.029	0.165
+1400	 0.068	0.045	0.043	0.020	0.326
+1500	 0.113	0.023	0.053	0.052	0.182
+1600	 0.008	0.007	0.008	0.001	0.284
+Model trained with 388 images
+iter: 72.9, total: 217.4, model: 84.1, backward: 51.0
+iter: 126.6, total: 106.8, model: 102.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 94.72 s, evaluation: 13.21 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+2600	 0.093	0.135	0.026	0.009	0.218
+2700	 0.023	0.034	0.027	0.012	0.159
+2800	 0.022	0.026	0.033	0.017	0.118
+2900	 0.005	0.006	0.016	0.002	0.195
+Model trained with 388 images
+iter: 73.8, total: 220.6, model: 84.0, backward: 54.3
+iter: 121.7, total: 103.3, model: 99.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 95.99 s, evaluation: 12.62 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.1}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+3900	 0.042	0.069	0.016	0.001	0.150
+4000	 0.019	0.038	0.021	0.011	0.243
+4100	 0.019	0.022	0.023	0.012	0.098
+4200	 0.002	0.003	0.015	0.004	0.171
+Model trained with 388 images
+iter: 74.5, total: 222.9, model: 83.7, backward: 56.1
+iter: 122.7, total: 105.8, model: 102.3, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 96.81 s, evaluation: 12.74 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+5200	 0.025	0.065	0.010	0.006	0.103
+5300	 0.011	0.027	0.016	0.007	0.122
+5400	 0.015	0.035	0.022	0.007	0.093
+5500	 0.001	0.004	0.009	0.008	0.163
+Model trained with 388 images
+iter: 74.0, total: 221.5, model: 83.8, backward: 56.7
+iter: 120.2, total: 101.3, model: 97.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 96.15 s, evaluation: 12.53 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+6500	 0.028	0.072	0.013	0.003	0.121
+6600	 0.011	0.038	0.010	0.005	0.111
+6700	 0.012	0.021	0.024	0.003	0.088
+6800	 0.001	0.001	0.013	0.015	0.230
+Model trained with 388 images
+iter: 74.2, total: 221.7, model: 83.2, backward: 56.7
+iter: 119.5, total: 101.3, model: 98.2, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 96.43 s, evaluation: 12.33 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.3}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+7800	 0.012	0.061	0.011	0.009	0.099
+7900	 0.014	0.027	0.010	0.005	0.108
+8000	 0.014	0.025	0.017	0.004	0.079
+8100	 0.000	0.001	0.007	0.014	0.199
+Model trained with 388 images
+iter: 74.1, total: 222.1, model: 83.1, backward: 57.1
+iter: 120.0, total: 100.9, model: 98.0, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 96.30 s, evaluation: 12.41 s
+mAP: {'bbox AP': 1.9, 'mask AP': 1.2}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+9100	 0.016	0.096	0.005	0.003	0.094
+9200	 0.004	0.037	0.010	0.004	0.111
+9300	 0.006	0.024	0.014	0.006	0.078
+9400	 0.000	0.001	0.001	0.007	0.182
+Model trained with 388 images
+iter: 74.2, total: 222.0, model: 83.2, backward: 57.3
+iter: 116.7, total: 100.4, model: 97.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 96.51 s, evaluation: 12.05 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+10400	 0.010	0.055	0.010	0.004	0.093
+10500	 0.009	0.025	0.010	0.002	0.129
+10600	 0.010	0.025	0.019	0.005	0.079
+10700	 0.000	0.001	0.009	0.010	0.171
+Model trained with 388 images
+iter: 73.9, total: 221.0, model: 82.5, backward: 58.1
+iter: 117.1, total: 99.2, model: 96.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 96.11 s, evaluation: 12.11 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+11700	 0.013	0.060	0.006	0.002	0.092
+11800	 0.006	0.033	0.013	0.002	0.109
+11900	 0.005	0.024	0.029	0.010	0.076
+12000	 0.000	0.001	0.007	0.013	0.208
+Model trained with 388 images
+iter: 70.9, total: 213.0, model: 78.7, backward: 55.1
+iter: 115.6, total: 98.1, model: 95.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.08s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 92.11 s, evaluation: 11.93 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+1300	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+
+1300	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+1300	testing accuracy 0.6440443213296398
+
+Round 13
+====================== Training set size: 1400
+Number of elements in training: 1400, number of positives examples: 420
+2 training accuracy: 0.625
+3 training accuracy: 0.7628571428571429
+4 training accuracy: 0.8521428571428571
+5 training accuracy: 0.9107142857142857
+6 training accuracy: 0.935
+7 training accuracy: 0.965
+8 training accuracy: 0.9642857142857143
+9 training accuracy: 0.99
+
+already trained: 0 epochs; to 10 epochs
+
+epoch: 1
+lr_epoch: 0.0013, factor: 1.0000
+0	 0.698	0.091	2.888	0.011	3.011
+100	 0.581	0.061	0.027	0.001	0.490
+200	 0.249	0.015	0.057	0.031	0.219
+300	 0.041	0.006	0.044	0.051	0.221
+400	 0.158	0.035	0.040	0.040	0.214
+Model trained with 420 images
+iter: 68.0, total: 202.8, model: 78.8, backward: 44.4
+iter: 120.9, total: 102.7, model: 97.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.15s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.12s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.4s
+training: 95.25 s, evaluation: 12.58 s
+mAP: {'bbox AP': 1.6, 'mask AP': 1.1}
+
+epoch: 2
+lr_epoch: 0.0013, factor: 1.0000
+1400	 0.128	0.073	0.024	0.025	0.184
+1500	 0.082	0.048	0.016	0.000	0.476
+1600	 0.065	0.008	0.031	0.016	0.175
+1700	 0.024	0.005	0.014	0.005	0.170
+1800	 0.075	0.068	0.087	0.045	0.271
+Model trained with 420 images
+iter: 69.6, total: 208.3, model: 78.9, backward: 49.8
+iter: 121.1, total: 102.0, model: 97.4, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 97.45 s, evaluation: 12.62 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.4}
+
+epoch: 3
+lr_epoch: 0.0013, factor: 1.0000
+2800	 0.064	0.109	0.020	0.012	0.214
+2900	 0.057	0.035	0.023	0.004	0.428
+3000	 0.020	0.009	0.022	0.012	0.146
+3100	 0.014	0.006	0.018	0.012	0.191
+3200	 0.040	0.053	0.066	0.019	0.171
+Model trained with 420 images
+iter: 70.5, total: 210.8, model: 78.9, backward: 52.4
+iter: 121.0, total: 101.6, model: 97.6, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.16s).
+Accumulating evaluation results...
+DONE (t=0.09s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.5s
+training: 98.69 s, evaluation: 12.65 s
+mAP: {'bbox AP': 1.8, 'mask AP': 1.0}
+
+epoch: 4
+lr_epoch: 0.0013, factor: 1.0000
+4200	 0.049	0.104	0.020	0.006	0.169
+4300	 0.036	0.032	0.013	0.001	0.448
+4400	 0.037	0.007	0.020	0.013	0.133
+4500	 0.015	0.004	0.014	0.006	0.190
+4600	 0.045	0.048	0.051	0.015	0.152
+Model trained with 420 images
+iter: 72.4, total: 215.1, model: 80.6, backward: 55.7
+iter: 116.0, total: 98.1, model: 94.8, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 101.32 s, evaluation: 12.00 s
+mAP: {'bbox AP': 2.0, 'mask AP': 1.2}
+
+epoch: 5
+lr_epoch: 0.0013, factor: 1.0000
+5600	 0.019	0.077	0.008	0.007	0.107
+5700	 0.029	0.031	0.026	0.002	0.394
+5800	 0.011	0.009	0.018	0.009	0.141
+5900	 0.003	0.006	0.006	0.006	0.174
+6000	 0.019	0.043	0.040	0.018	0.150
+Model trained with 420 images
+iter: 71.3, total: 214.4, model: 78.7, backward: 54.8
+iter: 121.3, total: 101.7, model: 97.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.14s).
+Accumulating evaluation results...
+DONE (t=0.08s).
+accumulate: 0.4s
+training: 99.78 s, evaluation: 12.67 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 6
+lr_epoch: 0.0013, factor: 1.0000
+7000	 0.025	0.055	0.013	0.008	0.084
+7100	 0.018	0.031	0.016	0.005	0.315
+7200	 0.007	0.008	0.017	0.008	0.128
+7300	 0.011	0.003	0.020	0.005	0.147
+7400	 0.037	0.046	0.029	0.009	0.140
+Model trained with 420 images
+iter: 71.7, total: 214.8, model: 79.0, backward: 55.5
+iter: 116.6, total: 99.0, model: 95.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.11s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 100.33 s, evaluation: 12.08 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+
+epoch: 7
+lr_epoch: 0.0013, factor: 1.0000
+8400	 0.017	0.062	0.011	0.009	0.087
+8500	 0.016	0.028	0.018	0.007	0.353
+8600	 0.008	0.007	0.009	0.009	0.117
+8700	 0.008	0.006	0.008	0.003	0.163
+8800	 0.041	0.038	0.033	0.012	0.147
+Model trained with 420 images
+iter: 71.5, total: 213.7, model: 79.0, backward: 55.1
+iter: 118.1, total: 98.9, model: 95.9, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.06s).
+accumulate: 0.3s
+training: 100.03 s, evaluation: 12.21 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 8
+lr_epoch: 0.0013, factor: 1.0000
+9800	 0.014	0.066	0.016	0.008	0.088
+9900	 0.014	0.026	0.017	0.014	0.312
+10000	 0.006	0.008	0.010	0.003	0.125
+10100	 0.009	0.004	0.018	0.002	0.148
+10200	 0.038	0.034	0.031	0.009	0.143
+Model trained with 420 images
+iter: 71.9, total: 215.5, model: 79.3, backward: 56.2
+iter: 117.2, total: 99.5, model: 96.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 100.62 s, evaluation: 12.12 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.3}
+
+epoch: 9
+lr_epoch: 0.0013, factor: 1.0000
+11200	 0.011	0.067	0.006	0.004	0.082
+11300	 0.019	0.025	0.017	0.015	0.362
+11400	 0.003	0.007	0.011	0.003	0.120
+11500	 0.005	0.007	0.006	0.003	0.133
+11600	 0.017	0.036	0.024	0.007	0.140
+Model trained with 420 images
+iter: 71.4, total: 213.8, model: 78.6, backward: 56.1
+iter: 116.3, total: 97.5, model: 94.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.10s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 99.96 s, evaluation: 12.03 s
+mAP: {'bbox AP': 2.2, 'mask AP': 1.3}
+
+epoch: 10
+lr_epoch: 0.0013, factor: 1.0000
+12600	 0.013	0.066	0.017	0.004	0.087
+12700	 0.011	0.026	0.021	0.008	0.406
+12800	 0.004	0.007	0.011	0.002	0.113
+12900	 0.003	0.003	0.009	0.003	0.128
+13000	 0.025	0.031	0.027	0.007	0.134
+Model trained with 420 images
+iter: 71.5, total: 214.0, model: 78.8, backward: 56.5
+iter: 115.2, total: 97.2, model: 94.5, num_iter: 100
+all gather: 0.0s
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.09s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.13s).
+Accumulating evaluation results...
+DONE (t=0.07s).
+accumulate: 0.3s
+training: 100.06 s, evaluation: 11.93 s
+mAP: {'bbox AP': 2.1, 'mask AP': 1.2}
+1400	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+
+1400	testing mAP {'bbox AP': 2.1, 'mask AP': 1.2}
+1400	testing accuracy 0.6225761772853186
+
