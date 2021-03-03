@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 Namespace(alg='rand', data='VOC', did=0, dim=(128, 128, 3), epochs=10, iters=200, lr=0.0001, lr_object=0.00125, lr_steps=[22, 26], model='mlp', momentum=0.9, nClasses=2, nEmb=256, nEnd=50000, nQuery=100, nStart=100, path='data', print_freq=100, seed=3, test_iter=100, weight_decay=0.0001)
 100	testing mAP {'bbox AP': 1.4, 'mask AP': 1.0}
 100	testing accuracy 0.5720221606648199
